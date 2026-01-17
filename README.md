@@ -456,3 +456,290 @@ Desviación estándar: 17,281%
 * **Validación:** Múltiples capas de filtros progresivos
 
 ---
+
+# Procesamiento de Datos de Crew - Pipeline ETL en Scala
+
+## Descripción General
+
+Este proyecto implementa un **pipeline de extracción, transformación y carga (ETL)** para procesar datos de equipos de producción cinematográfica (crew) contenidos en un archivo CSV. El sistema está diseñado para manejar eficientemente grandes volúmenes de datos mediante procesamiento fila por fila, evitando la carga completa del archivo en memoria.
+
+---
+
+## Tecnologías Utilizadas
+
+| Tecnología | Propósito |
+|------------|-----------|
+| **Scala** | Lenguaje de programación funcional |
+| **Circe** | Biblioteca para parsing y serialización JSON |
+| **scala.io.Source** | Lectura eficiente de archivos |
+
+---
+
+## Arquitectura del Pipeline
+
+El procesamiento sigue un flujo secuencial de cinco etapas:
+```
+1. Lectura incremental → 2. Parsing CSV → 3. Limpieza JSON → 4. Decodificación → 5. Normalización
+```
+
+---
+
+## Modelo de Datos
+
+Se define una case class `Crew` que representa a cada miembro del equipo de producción:
+```scala
+case class Crew(
+  credit_id: Option[String],
+  department: Option[String],
+  gender: Option[Int],
+  id: Option[Int],
+  job: Option[String],
+  name: Option[String],
+  profile_path: Option[String]
+)
+```
+
+> El uso de `Option[T]` permite manejar valores nulos o ausentes de forma segura, siguiendo los principios de programación funcional.
+
+---
+
+## Funciones Principales
+
+### Limpieza de JSON
+
+La función `cleanCrewJson` transforma el formato Python-like del CSV a JSON válido:
+- Reemplaza comillas simples (`'`) por dobles (`"`)
+- Convierte `None` → `null`
+- Convierte `True`/`False` → `true`/`false`
+
+### Normalización de Datos
+
+| Tipo | Regla Aplicada |
+|------|----------------|
+| **Texto** | Elimina espacios redundantes, retorna `None` para cadenas vacías |
+| **Enteros** | Aplica valor absoluto para garantizar valores positivos |
+| **Crew** | Aplica las reglas anteriores a todos los campos del objeto |
+
+### Parsing CSV Personalizado
+
+La función `parseCSVLine` implementa un parser que respeta las comillas, permitiendo manejar correctamente campos que contienen el delimitador (`;`) dentro de su contenido.
+
+---
+
+## Características Técnicas
+
+- **Procesamiento lazy**: Utiliza iteradores para evitar cargar todo el archivo en memoria
+- **Tolerancia a errores**: Los registros con JSON malformado se omiten sin interrumpir el proceso
+- **Inmutabilidad**: Todas las transformaciones generan nuevos objetos sin modificar los originales
+- **Composición funcional**: Uso extensivo de `flatMap`, `map` y pattern matching
+
+---
+
+## Salida del Sistema
+
+El pipeline genera:
+
+1. Conteo total de registros procesados
+2. Ranking de los 5 departamentos más frecuentes
+3. Muestra del primer registro en formato JSON formateado
+
+---
+
+## Ejecución
+
+### Requisitos previos
+- Scala 2.13+
+- SBT (Scala Build Tool)
+- Dependencias de Circe
+
+### Archivo de entrada
+El archivo debe cumplir con:
+- Formato: **CSV**
+- Codificación: **UTF-8**
+- Separador: **`;`**
+- Columna requerida: **`crew`** (con datos JSON embebido)
+
+# Limpieza de Datos de Películas - Pipeline Streaming con Cats Effect y FS2
+
+## Descripción General
+
+Este proyecto implementa un **pipeline de limpieza y transformación de datos** para procesar información cinematográfica contenida en un archivo CSV. El sistema utiliza **procesamiento en streaming** mediante las bibliotecas Cats Effect y FS2, permitiendo manejar grandes volúmenes de datos de manera eficiente y con control total sobre los efectos secundarios.
+
+---
+
+## Tecnologías Utilizadas
+
+| Tecnología | Propósito |
+|------------|-----------|
+| **Scala** | Lenguaje de programación funcional |
+| **Cats Effect** | Manejo de efectos e IO asíncrono |
+| **FS2** | Procesamiento de streams funcional |
+| **fs2-data-csv** | Parsing de archivos CSV en streaming |
+
+---
+
+## Arquitectura del Pipeline
+
+El procesamiento sigue un flujo de **dos pasadas**:
+```
+PASADA 1: Lectura → Parsing CSV → Transformación → Limpieza Básica (nulos y rangos)
+PASADA 2: Cálculo de límites IQR → Filtrado de Outliers → Resultados Finales
+```
+
+---
+
+## Modelos de Datos
+
+### Modelo Crudo (MovieRaw)
+
+Representa la estructura original del CSV con 25 campos:
+```scala
+case class MovieRaw(
+  adult: String,
+  belongs_to_collection: String,
+  budget: Double,
+  genres: String,
+  homepage: String,
+  id: Double,
+  imdb_id: String,
+  original_language: String,
+  original_title: String,
+  overview: String,
+  popularity: Double,
+  poster_path: String,
+  production_companies: String,
+  production_countries: String,
+  release_date: String,
+  revenue: Double,
+  runtime: Double,
+  spoken_languages: String,
+  status: String,
+  tagline: String,
+  title: String,
+  video: String,
+  vote_average: Double,
+  vote_count: Double,
+  crew: String
+)
+```
+
+### Modelo Procesado (Movie)
+
+Incluye campos derivados calculados durante la transformación:
+```scala
+case class Movie(
+  // ... campos originales ...
+  release_year: Double,
+  release_month: Double,
+  release_day: Double,
+  `return`: Double  // ROI calculado
+)
+```
+
+---
+
+## Funciones Principales
+
+### Transformación de Datos
+
+| Función | Descripción |
+|---------|-------------|
+| `parsearFecha` | Extrae año, mes y día de una fecha en formato "YYYY-MM-DD" |
+| `calcularReturn` | Calcula el ROI como `(revenue - budget) / budget` |
+| `transformar` | Convierte `MovieRaw` a `Movie` aplicando las transformaciones |
+
+### Validaciones de Limpieza
+
+| Función | Criterios |
+|---------|-----------|
+| `tieneValoresValidos` | Verifica que campos críticos no sean nulos, vacíos o cero |
+| `tieneRangosValidos` | Valida rangos lógicos (año 1888-2025, mes 1-12, rating 0-10, etc.) |
+| `esOutlier` | Detecta valores atípicos usando el método IQR con factor 3.0 |
+
+### Detección de Outliers (IQR)
+```scala
+def calcularLimitesIQR(datos: List[Double]): (Double, Double) =
+  val ordenados = datos.sorted
+  val q1 = ordenados((ordenados.size * 0.25).toInt)
+  val q3 = ordenados((ordenados.size * 0.75).toInt)
+  val iqr = q3 - q1
+  (math.max(0, q1 - 3.0 * iqr), q3 + 3.0 * iqr)
+```
+
+> Se utiliza un factor de 3.0 (en lugar del tradicional 1.5) para ser menos restrictivo con los datos.
+
+---
+
+## Estadísticas de Limpieza
+
+El sistema rastrea métricas detalladas mediante una estructura inmutable:
+```scala
+case class EstadisticasLimpieza(
+  totalLeidos: Int,
+  erroresLectura: Int,
+  descartadosNulos: Int,
+  descartadosRangos: Int,
+  descartadosOutliers: Int,
+  conservados: Int,
+  totalCeldas: Long
+)
+```
+
+---
+
+## Características Técnicas
+
+- **Procesamiento en streaming**: Utiliza FS2 para procesar datos sin cargar todo el archivo en memoria
+- **Efectos controlados**: Cats Effect IO garantiza pureza funcional y manejo seguro de efectos
+- **Estado inmutable**: Uso de `Ref` para mantener contadores de forma thread-safe
+- **Tolerancia a errores**: Las filas malformadas se ignoran silenciosamente sin interrumpir el proceso
+- **Derivación automática**: Uso de `deriveCsvRowDecoder` para generar decodificadores CSV automáticamente
+- **Feedback en tiempo real**: Muestra progreso cada N registros procesados
+
+---
+
+## Flujo de Ejecución
+
+1. **Conteo de líneas**: Primera lectura para obtener el total de líneas del archivo
+2. **Parsing CSV**: Decodificación de registros válidos usando el separador `;`
+3. **Transformación**: Conversión de `MovieRaw` a `Movie` con campos derivados
+4. **Limpieza básica**: Filtrado por valores nulos y rangos inválidos
+5. **Cálculo IQR**: Determinación de límites para budget, revenue y popularity
+6. **Filtrado de outliers**: Eliminación de registros fuera de los límites IQR
+7. **Generación de reporte**: Estadísticas finales y análisis de datos
+
+---
+
+## Salida del Sistema
+
+El pipeline genera un reporte completo que incluye:
+
+1. Estadísticas de lectura y limpieza (registros leídos, errores, descartados por categoría)
+2. Distribución de películas por año (últimos 10 años)
+3. Estadísticas básicas (promedios de budget, revenue, runtime y return)
+4. Porcentaje de datos conservados
+
+---
+
+## Ejecución
+
+### Requisitos previos
+- Scala 3.x
+- SBT (Scala Build Tool)
+- Dependencias:
+  - cats-effect
+  - fs2-core
+  - fs2-io
+  - fs2-data-csv
+
+### Archivo de entrada
+El archivo debe cumplir con:
+- Formato: **CSV**
+- Codificación: **UTF-8**
+- Separador: **`;`**
+- Estructura: **25 columnas** según el modelo `MovieRaw`
+
+### Ejecutar el proyecto
+```bash
+sbt run
+```
