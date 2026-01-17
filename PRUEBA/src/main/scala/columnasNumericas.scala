@@ -20,10 +20,8 @@ object Estadisticos:
   def promedio(datos: List[Double]): Double =
     if datos.isEmpty then 0.0 else datos.sum / datos.length
 
-  // Nueva estadística: Suma Total
   def sumaTotal(datos: List[Double]): Double = datos.sum
 
-  // Nueva estadística: Desviación Estándar
   def desviacionEstandar(datos: List[Double]): Double =
     if datos.isEmpty then 0.0
     else
@@ -32,7 +30,7 @@ object Estadisticos:
       Math.sqrt(varianza)
 
 object columnasNumericas extends IOApp.Simple:
-  val filePath = Path("C:\\Users\\Luis\\Desktop\\Practicum1.1\\PRUEBA\\src\\main\\resources\\data\\pi-movies-complete-2025-12-04.csv")
+  val filePath = Path("C:\\Users\\Luis\\Desktop\\Nueva carpeta\\Practicum1.1\\PRUEBA\\src\\main\\resources\\data\\pi-movies-complete-2025-12-04.csv")
 
   def imprimirMetricas(nombre: String, datos: List[Double]): IO[Unit] =
     val avg  = Estadisticos.promedio(datos)
@@ -41,10 +39,10 @@ object columnasNumericas extends IOApp.Simple:
     IO.println(f"  > $nombre%-12s | Promedio: $avg%10.2f | Suma: $sum%15.2f | Desv. Est: $std%10.2f")
 
   val run: IO[Unit] =
-    val lecturaCSV: IO[List[Movie]] = Files[IO]
+    val lecturaCSV: IO[List[MovieNum]] = Files[IO]
       .readAll(filePath)
       .through(text.utf8.decode)
-      .through(decodeUsingHeaders[Movie](';'))
+      .through(decodeUsingHeaders[MovieNum](';'))
       .compile
       .toList
 
