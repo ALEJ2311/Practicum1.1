@@ -186,29 +186,6 @@ Total registros analizados correctamente: 3,487
 
 ---
 
-## Conclusiones del Análisis
-
-### ✅ Fortalezas del Dataset
-
-* Alta completitud en campos críticos (idioma, estado)
-* Predominancia clara de contenido en inglés
-* Mayoría de películas ya estrenadas (dataset actualizado)
-
-### ⚠️ Puntos de Atención
-
-* **Datos faltantes:** 53.7% de películas sin eslogan
-* **Datos faltantes:** 88% de películas sin colección registrada
-* **Duplicados potenciales:** Algunos títulos aparecen múltiples veces
-* **Formato inconsistente:** Columna de colección en formato JSON crudo
-
-### 🎯 Recomendaciones
-
-1. **Limpieza de duplicados:** Investigar películas con títulos repetidos
-2. **Normalización:** Parsear el campo de colección desde JSON a formato tabular
-3. **Enriquecimiento:** Completar eslogans faltantes desde fuentes externas
-
----
-
 ## Aplicaciones Prácticas
 
 Este análisis de frecuencias es útil para:
