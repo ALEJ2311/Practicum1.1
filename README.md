@@ -5,7 +5,7 @@ Utilizando **Scala** junto con **Cats Effect** y **FS2**, este sistema orquesta 
 * **Saneamiento:** Limpieza y normalización de registros.
 * **Análisis:** Generación de métricas estadísticas y procesamiento de texto.
 
-## 1. AnalisisEstadisticoSimple.scala - Reporte de Métricas Descriptivas
+## 1. columnasNumericas.scala - Reporte de Métricas Descriptivas
 
 Este módulo ejecuta la Fase 2 del Análisis Exploratorio de Datos (EDA), proporcionando un resumen matemático completo de las variables numéricas del dataset. A diferencia de un análisis básico, este script implementa una arquitectura modular separando la lógica matemática pura del flujo de ejecución de entrada/salida.
 
