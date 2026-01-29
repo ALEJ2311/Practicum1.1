@@ -744,6 +744,78 @@ El archivo debe cumplir con:
 ```bash
 sbt run
 ```
+## Extracción y Normalización de Entidades (Relational ETL)
+
+**Módulo:** `MainJson.scala`
+
+###  Descripción General
+Este módulo aborda uno de los desafíos más complejos del dataset: la transformación de columnas que contienen estructuras de datos anidadas (JSON arrays) en un modelo relacional normalizado. El sistema descompone la estructura plana del archivo CSV original para construir un esquema de Entidad-Relación compatible con la **Tercera Forma Normal (3NF)**.
+
+###  Objetivos del Proceso
+* **Parsing de Estructuras Complejas:** Decodificación de cadenas JSON (como `genres`, `cast`, `crew`) utilizando la librería **Circe**.
+* **Separación de Responsabilidades:** División de la información en Entidades Únicas (ej. Un actor, un género) y Tablas de Relación (ej. Actor X actuó en Película Y).
+* **Deduplicación:** Garantizar que cada entidad (como una compañía de producción o un país) se almacene una única vez, independientemente de en cuántas películas aparezca.
+
+###  Entidades Extraídas
+El script procesa y extrae 8 entidades principales y sus respectivas tablas de enlace (Many-to-Many):
+
+1.  **Genres (Géneros):** Clasificación temática.
+2.  **Production Companies:** Empresas productoras.
+3.  **Production Countries:** Países de origen (norma ISO 3166-1).
+4.  **Spoken Languages:** Idiomas hablados (norma ISO 639-1).
+5.  **Keywords:** Palabras clave descriptivas.
+6.  **Collections:** Franquicias o sagas de películas.
+7.  **People (Cast & Crew):** Unificación de actores y equipo técnico en una sola entidad `Person`, diferenciando su rol mediante tablas de enlace específicas (`Link_Movie_Cast`, `Link_Movie_Crew`).
+8.  **Users & Ratings:** Información de usuarios y sus calificaciones.
+
+### ⚙️ Estrategia de Procesamiento
+El flujo de ejecución utiliza **FS2 (Functional Streams)** para mantener la eficiencia de memoria:
+
+1.  **Lectura y Filtrado:** Se lee el dataset y se descartan registros con IDs corruptos.
+2.  **Explosión de JSON:** Por cada película, se "aplanan" los arrays JSON.
+3.  **Proyección y Mapeo:** Se crean tuplas `(Entidad, Relación)`.
+4.  **Deduplicación en Memoria:** Se agrupan las entidades por su ID único para escribir catálogos limpios.
+5.  **Persistencia Intermedia:** Se generan archivos CSV normalizados (`Entity_*.csv` y `Link_*.csv`) listos para la ingesta en base de datos.
+
+---
+
+## 5.7 Diseño del Esquema y Carga a MySQL
+
+**Módulo:** `NormalizacionAMySQL.scala`
+
+###  Descripción General
+El módulo final implementa la capa de persistencia, orquestando la creación del esquema físico en la base de datos y la carga masiva de datos. Se utiliza **Doobie**, una capa JDBC puramente funcional para Scala, que permite gestionar transacciones y conexiones de forma segura.
+
+###  Arquitectura del Esquema de Base de Datos
+Se diseñó un esquema relacional robusto (**Snowflake Schema**) centrado en la tabla `Movie`.
+
+**Definición de Tablas (DDL):**
+El sistema ejecuta scripts SQL automatizados para crear:
+* **Restricciones de Integridad:** Primary Keys compuestas y Foreign Keys para asegurar la consistencia referencial.
+* **Índices de Rendimiento:** Índices en columnas de búsqueda frecuente (`collection_id`, `imdb_id`) y en claves foráneas para optimizar los JOINs.
+* **Tipos de Datos Optimizados:** Uso de `DECIMAL` para montos financieros, `DATE` para fechas y `TINYINT` para booleanos.
+
+###  Pipeline de Ingesta (Batch Processing)
+Para manejar el volumen de datos sin bloquear la base de datos, se implementó una estrategia de carga por lotes (**Chunking**):
+
+1.  **Preparación del Entorno:**
+    * Desactivación temporal de `FOREIGN_KEY_CHECKS` y `UNIQUE_CHECKS` para acelerar la inserción masiva.
+    * Configuración de `SQL_MODE` estricto para garantizar calidad de datos.
+2.  **Carga de Catálogos (Entidades Fuertes):**
+    * Se insertan primero las tablas independientes (`Genre`, `Person`, `Company`, etc.).
+    * **Tamaño del Lote:** 500 registros por transacción.
+3.  **Carga de Tabla Central (Movies):**
+    * Inserción de la tabla `Movie` con manejo de nulos (convertidos a `NULL` SQL o valores por defecto como 0).
+4.  **Carga de Relaciones (Tablas de Enlace):**
+    * Finalmente, se cargan las tablas pivote (`Movie_Genre`, `Cast`, `Crew`, etc.) que conectan las entidades.
+
+### 📊 Resumen de Ejecución
+El script genera una salida detallada en consola que permite auditar el proceso de ETL:
+
+<img width="421" height="659" alt="image" src="https://github.com/user-attachments/assets/c5942204-9384-4de6-a5c2-4d865495da3d" />
+<img width="473" height="655" alt="image" src="https://github.com/user-attachments/assets/f5011614-125c-4477-ab81-f9c1293ef466" />
+<img width="658" height="318" alt="image" src="https://github.com/user-attachments/assets/1703e123-e2a1-4d4f-ba18-8a1b85677145" />
+
 # DOMINIO DE FUNDAMENTOS DE BASE DE DATOS
 
 # Análisis, Diseño y Normalización de Base de Datos de Películas (TMDB)
