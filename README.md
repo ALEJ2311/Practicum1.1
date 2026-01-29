@@ -744,3 +744,403 @@ El archivo debe cumplir con:
 ```bash
 sbt run
 ```
+# DOMINIO DE FUNDAMENTOS DE BASE DE DATOS
+
+# Análisis, Diseño y Normalización de Base de Datos de Películas (TMDB)
+
+## 1. Descripción General del Dataset
+**Fuente:** Análisis del Dataset - descripción general.
+
+El dataset a analizar contiene **3487 películas**, cada una descrita con **28 atributos**. Incluye información básica como título, idioma, fecha de estreno, duración, presupuesto y recaudación, junto con metadatos en formato JSON que detallan géneros, reparto, directores, compañías productoras y países de origen.
+
+Su estructura combina datos numéricos, categóricos y textuales, lo que permite realizar análisis descriptivos, comparar tendencias cinematográficas y estudiar el comportamiento de la industria a lo largo del tiempo.
+
+### Estructura de Datos Inicial
+
+| Columna | Tipo de dato | Descripción |
+| :--- | :--- | :--- |
+| `id` | int | Identificador único de TMDB. |
+| `imdb_id` | string | Código único de IMDb (ejemplo: tt1234567). |
+| `title` | string | Título de la película. |
+| `original_title` | string | Título original de producción. |
+| `original_language` | string | Idioma original (ej.: en, fr, es). |
+| `overview` | string | Sinopsis o resumen. |
+| `tagline` | string | Frase promocional. |
+| `release_date` | string (fecha) | Fecha de estreno. |
+| `budget` | double | Presupuesto en USD. |
+| `revenue` | double | Recaudación total en USD. |
+| `runtime` | int | Duración en minutos. |
+| `popularity` | double | Métrica TMDB de popularidad. |
+| `vote_average` | double | Promedio de calificaciones. |
+| `vote_count` | int | Número de votaciones. |
+| `genres` | JSON | Lista de géneros con atributos: id, name. |
+| `belongs_to_collection` | JSON/string | Información de colecciones o sagas. |
+| `poster_path` | string | URL parcial del póster. |
+| `production_companies` | JSON | Lista de compañías: id, name. |
+| `production_countries` | JSON | Lista de países: iso_3166_1, name. |
+| `spoken_languages` | JSON | Lista de idiomas hablados. |
+| `cast` | JSON | Lista de actores: id, name, character. |
+| `crew` | JSON | Miembros del equipo: job, department, name. |
+| `homepage` | string | Sitio web oficial de la película. |
+| `status` | string | Estado: Released, Post Production, etc. |
+| `adult` | boolean | Indica si contiene contenido adulto. |
+| `video` | boolean | Indica si es un video especial. |
+| `keywords` | JSON | Palabras clave (temas). |
+| `ratings` | JSON/lista | Valoraciones de usuarios con userId, rating, timestamp. |
+
+---
+
+## 2. Modelo Conceptual
+
+### Esquema Conceptual (Diagrama E/R)
+> **Nota:** Inserte aquí el diagrama conceptual (Figura página 2).
+>
+<img width="1091" height="754" alt="image" src="https://github.com/user-attachments/assets/92425656-124f-46f3-aeff-087b275061fb" />
+
+### Diccionario de Datos (Modelo Conceptual)
+
+| Entidad | Atributo | Descripción | Restricciones (Dominio y Obligatoriedad) |
+| :--- | :--- | :--- | :--- |
+| **Movie** | movie_id | Identificador único de la película | INT, PK, NOT NULL |
+| **Movie** | collection_id | Colección a la que pertenece | INT, FK → Collection(collection_id), NULL |
+| **Movie** | title | Título principal | VARCHAR(255), NOT NULL |
+| **Movie** | original_title | Título original | VARCHAR(255), NOT NULL |
+| **Movie** | overview | Sinopsis | TEXT, NULL |
+| **Movie** | release_date | Fecha de estreno | DATE, NULL |
+| **Movie** | runtime | Duración en minutos | INT, NULL |
+| **Movie** | budget | Presupuesto | BIGINT, NULL |
+| **Movie** | revenue | Recaudación | BIGINT, NULL |
+| **Movie** | popularity | Índice de popularidad | FLOAT, NULL |
+| **Movie** | vote_average | Calificación promedio | FLOAT, NULL |
+| **Movie** | vote_count | Número de votos | INT, NULL |
+| **Movie** | adult | Contenido adulto | BOOLEAN, NOT NULL |
+| **Movie** | status | Estado de estreno | VARCHAR(50), NULL |
+| **Movie** | homepage | Sitio web oficial | VARCHAR(255), NULL |
+| **Movie** | imdb_id | Identificador en IMDB | VARCHAR(20), NULL |
+| **Movie** | original_language | Idioma original principal | CHAR(2), NULL |
+| **Movie** | video | Tiene video promocional | BOOLEAN, NOT NULL |
+| **Movie** | poster_path | Ruta del póster | VARCHAR(255), NULL |
+| **Movie** | backdrop_path | Ruta del fondo | VARCHAR(255), NULL |
+| **Collection** | collection_id | Identificador de la colección | INT, PK, NOT NULL |
+| **Collection** | name | Nombre de la colección | VARCHAR(255), NOT NULL |
+| **Collection** | poster_path | Imagen de la colección | VARCHAR(255), NULL |
+| **Collection** | backdrop_path | Imagen de fondo | VARCHAR(255), NULL |
+| **Genre** | genre_id | Identificador del género | INT, PK, NOT NULL |
+| **Genre** | name | Nombre del género | VARCHAR(100), NOT NULL |
+| **Person** | person_id | Identificador de la persona | INT, PK, NOT NULL |
+| **Person** | name | Nombre completo | VARCHAR(255), NOT NULL |
+| **Person** | gender | Género | INT, NULL |
+| **Person** | profile_path | Foto de perfil | VARCHAR(255), NULL |
+| **Production Company** | company_id | Identificador de la productora | INT, PK, NOT NULL |
+| **Production Company** | name | Nombre de la productora | VARCHAR(255), NOT NULL |
+| **Production Country** | country_code | Código ISO del país | CHAR(2), PK, NOT NULL |
+| **Production Country** | name | Nombre del país | VARCHAR(100), NOT NULL |
+| **SpokenLanguage** | language_code | Código ISO del idioma | CHAR(2), PK, NOT NULL |
+| **SpokenLanguage** | name | Nombre del idioma | VARCHAR(100), NOT NULL |
+| **Keyword** | keyword_id | Identificador de la palabra clave | INT, PK, NOT NULL |
+| **Keyword** | name | Palabra clave descriptiva | VARCHAR(100), NOT NULL |
+| **User** | user_id | Identificador del usuario | INT, PK, NOT NULL |
+| **Rating** | user_id | Usuario que califica | INT, PK, FK → User(user_id) |
+| **Rating** | movie_id | Película calificada | INT, PK, FK → Movie(movie_id) |
+| **Rating** | rating | Valor de la calificación | FLOAT, NOT NULL |
+| **Rating** | timestamp | Momento de la calificación | BIGINT, NOT NULL |
+
+---
+
+## 3. Primer Modelo Lógico (Estado Inicial / Incorrecto)
+
+Este modelo representa el estado inicial del diseño antes de completar la normalización rigurosa. Presenta problemas de dependencias y atomicidad que se corrigen en la siguiente fase.
+
+### Diagrama del Primer Modelo Lógico
+> **Nota:** Inserte aquí el diagrama de la página 5 (Figura con estructura compleja no normalizada).
+>
+<img width="1097" height="747" alt="image" src="https://github.com/user-attachments/assets/4d91afc3-0bad-4f9b-a978-0fef44434bf9" />
+
+### Problemas Identificados en el Modelo Inicial
+1.  **Violaciones a 1NF:**
+    * Campos JSON con múltiples valores: `genres`, `production_companies`, `production_countries`, `spoken_languages`, `keywords`, `cast`, `crew`, `ratings`.
+    * Campo JSON anidado: `belongs_to_collection`.
+    * No hay atomicidad en los datos.
+2.  **Violaciones a 2NF y 3NF (anticipadas):**
+    * Información de colecciones mezclada con datos de películas.
+    * Datos de valoraciones incluidos directamente.
+    * Información descriptiva de idiomas y países sin separar.
+
+---
+
+## 4. Proceso de Normalización
+
+### 4.1 Primera Forma Normal (1NF)
+**Objetivo:** Eliminar grupos repetidos y garantizar atomicidad de valores.
+
+* **Tabla Principal MOVIES:** Se mantuvieron los atributos atómicos (`movie_id`, `budget`, `title`, etc.).
+* **Tablas Derivadas (Extracción de JSON):**
+    * `GENRES_TEMP`: (movie_id, genre_id, genre_name)
+    * `PRODUCTION_COMPANIES_TEMP`: (movie_id, company_id, company_name)
+    * `PRODUCTION_COUNTRIES_TEMP`: (movie_id, country_iso, country_name)
+    * `SPOKEN_LANGUAGES_TEMP`: (movie_id, language_iso, language_name)
+    * `KEYWORDS_TEMP`: (movie_id, keyword_id, keyword_name)
+    * `CAST_TEMP`: (cast_id, movie_id, actor_id, actor_name, character_name, credit_order, gender, profile_path)
+    * `CREW_TEMP`: (crew_id, movie_id, person_id, person_name, job_title, department, gender, profile_path)
+    * `RATINGS_TEMP`: (movie_id, user_id, rating_value, rating_timestamp)
+
+**Resultado 1NF:** Cada campo contiene un único valor atómico. No hay listas ni arrays en ninguna celda.
+
+### 4.2 Segunda Forma Normal (2NF)
+**Objetivo:** Eliminar dependencias parciales. Los atributos no-clave deben depender de toda la clave primaria.
+
+**Análisis de problemas en tablas compuestas:**
+1.  **Géneros:** `genre_name` dependía solo de `genre_id`, no de `movie_id`. → Se creó tabla maestra `GENRES` y relación `MOVIE_GENRES`.
+2.  **Compañías, Países, Idiomas, Keywords:** Mismo caso. Se crearon tablas maestras (`COMPANIES`, `COUNTRIES`, `LANGUAGES`, `KEYWORDS`) y sus relaciones intermedias.
+3.  **Cast y Crew:** Datos personales (`name`, `gender`, `profile_path`) se repetían. → Se creó entidad maestra `PEOPLE`. Las tablas `MOVIE_CAST` y `MOVIE_CREW` ahora solo contienen datos del rol específico.
+4.  **Colecciones:** Atributos de colección dependían solo de `collection_id`. → Se creó tabla `COLLECTIONS` y relación `MOVIE_COLLECTIONS`.
+
+**Resultado 2NF:** Entidades maestras creadas y dependencias parciales eliminadas.
+
+### 4.3 Tercera Forma Normal (3NF)
+**Objetivo:** Eliminar dependencias transitivas. Ningún atributo no-clave debe depender de otro atributo no-clave.
+
+* **Análisis MOVIES:** El campo `collection_id` determinaba el nombre y póster de la colección (`movie_id` → `collection_id` → `collection_name`).
+* **Solución:** Se mantuvo `COLLECTIONS` como tabla independiente. La tabla `MOVIES` referencia a `COLLECTIONS` mediante clave foránea, eliminando los datos redundantes de la colección dentro de la tabla de películas.
+
+---
+
+## 5. Modelo Lógico Final (Normalizado y Correcto)
+
+Este es el modelo resultante y optimizado que cumple con las tres formas normales, listo para su implementación física.
+
+### Diagrama del Modelo Lógico Final
+> **Nota:** Inserte aquí el diagrama final de la página 13 (Figura 4.5).
+>
+<img width="951" height="750" alt="image" src="https://github.com/user-attachments/assets/4641498c-00f0-4731-b050-33d62380ff73" />
+
+### Diccionario de Datos (Modelo Lógico Final)
+
+| Entidad | Atributo | Descripción | Restricciones |
+| :--- | :--- | :--- | :--- |
+| **Movie** | movie_id | Identificador único de la película | INT, PK, NOT NULL |
+| **Movie** | title | Título principal | VARCHAR(255), NOT NULL |
+| **Movie** | original_title | Título original | VARCHAR(255), NOT NULL |
+| **Movie** | original_language | Código de idioma original | VARCHAR(10), NULL |
+| **Movie** | overview | Sinopsis | TEXT, NULL |
+| **Movie** | release_date | Fecha de estreno | DATE, NULL |
+| **Movie** | runtime | Duración en minutos | INT, NULL |
+| **Movie** | budget | Presupuesto | DECIMAL(15,2), NULL |
+| **Movie** | revenue | Recaudación | DECIMAL(15,2), NULL |
+| **Movie** | popularity | Índice de popularidad | DECIMAL(10,2), NULL |
+| **Movie** | vote_average | Calificación promedio | DECIMAL(3,1), NULL |
+| **Movie** | vote_count | Número de votos | INT, NULL |
+| **Movie** | adult | Contenido adulto | BOOLEAN, NOT NULL |
+| **Movie** | video | Video promocional | BOOLEAN, NOT NULL |
+| **Movie** | status | Estado de la película | VARCHAR(50), NULL |
+| **Movie** | homepage | Sitio web oficial | VARCHAR(255), NULL |
+| **Movie** | imdb_id | Identificador IMDB | VARCHAR(20), NULL |
+| **Movie** | poster_path | Ruta del póster | VARCHAR(255), NULL |
+| **Movie** | backdrop_path | Ruta del fondo | VARCHAR(255), NULL |
+| **Movie** | tagline | Lema promocional | VARCHAR(255), NULL |
+| **Movie** | collection_id | Colección asociada | INT, FK → Collection.collection_id, NULL |
+| **Collection** | collection_id | Identificador de colección | INT, PK, NOT NULL |
+| **Collection** | name | Nombre de la colección | VARCHAR(255), NOT NULL |
+| **Collection** | poster_path | Póster de colección | VARCHAR(255), NULL |
+| **Collection** | backdrop_path | Fondo de colección | VARCHAR(255), NULL |
+| **Genre** | genre_id | Identificador del género | INT, PK, NOT NULL |
+| **Genre** | name | Nombre del género | VARCHAR(50), NOT NULL |
+| **Movie_Genre** | movie_id | Película asociada | INT, PK, FK → Movie.movie_id, NOT NULL |
+| **Movie_Genre** | genre_id | Género asociado | INT, PK, FK → Genre.genre_id, NOT NULL |
+| **Keyword** | keyword_id | Identificador de keyword | INT, PK, NOT NULL |
+| **Keyword** | name | Nombre de keyword | VARCHAR(100), NOT NULL |
+| **Movie_Keyword** | movie_id | Película asociada | INT, PK, FK → Movie.movie_id, NOT NULL |
+| **Movie_Keyword** | keyword_id | Keyword asociada | INT, PK, FK → Keyword.keyword_id, NOT NULL |
+| **Production Company** | company_id | Identificador de productora | INT, PK, NOT NULL |
+| **Production Company** | name | Nombre de productora | VARCHAR(255), NOT NULL |
+| **Movie_ProductionCompany** | movie_id | Película asociada | INT, PK, FK → Movie.movie_id, NOT NULL |
+| **Movie_ProductionCompany** | company_id | Productora asociada | INT, PK, FK → ProductionCompany.company_id, NOT NULL |
+| **Production Country** | iso_3166_1 | Código del país | CHAR(2), PK, NOT NULL |
+| **Production Country** | name | Nombre del país | VARCHAR(100), NOT NULL |
+| **Movie_ProductionCountry** | movie_id | Película asociada | INT, PK, FK → Movie.movie_id, NOT NULL |
+| **Movie_ProductionCountry** | iso_3166_1 | País asociado | CHAR(2), PK, FK → ProductionCountry.iso_3166_1, NOT NULL |
+| **SpokenLanguage** | iso_639_1 | Código del idioma | VARCHAR(10), PK, NOT NULL |
+| **SpokenLanguage** | name | Nombre del idioma | VARCHAR(100), NOT NULL |
+| **Movie_SpokenLanguage** | movie_id | Película asociada | INT, PK, FK → Movie.movie_id, NOT NULL |
+| **Movie_SpokenLanguage** | iso_639_1 | Idioma asociado | VARCHAR(10), PK, FK → SpokenLanguage.iso_639_1, NOT NULL |
+| **Person** | person_id | Identificador de persona | INT, PK, NOT NULL |
+| **Person** | name | Nombre completo | VARCHAR(255), NOT NULL |
+| **Person** | gender | Género | INT, NULL |
+| **Person** | profile_path | Ruta de imagen | VARCHAR(255), NULL |
+| **Crew** | movie_id | Película asociada | INT, PK, FK → Movie.movie_id, NOT NULL |
+| **Crew** | person_id | Persona asociada | INT, PK, FK → Person.person_id, NOT NULL |
+| **Crew** | department | Departamento | VARCHAR(100), NULL |
+| **Crew** | job | Rol técnico | VARCHAR(100), NOT NULL |
+| **Crew** | credit_id | Identificador de crédito | VARCHAR(50), NOT NULL |
+| **Cast** | movie_id | Película asociada | INT, PK, FK → Movie.movie_id, NOT NULL |
+| **Cast** | person_id | Persona asociada | INT, PK, FK → Person.person_id, NOT NULL |
+| **Cast** | character_name | Nombre del personaje | VARCHAR(255), NOT NULL |
+| **Cast** | cast_order | Orden de aparición | INT, NULL |
+| **Cast** | credit_id | Identificador de crédito | VARCHAR(50), NULL |
+| **Cast** | cast_id | Identificador del rol | INT, NULL |
+| **User** | user_id | Identificador de usuario | INT, PK, NOT NULL |
+| **Rating** | user_id | Usuario que califica | INT, PK, FK → User.user_id, NOT NULL |
+| **Rating** | movie_id | Película calificada | INT, PK, FK → Movie.movie_id, NOT NULL |
+| **Rating** | rating | Valor de calificación | DECIMAL(3,1), NOT NULL |
+| **Rating** | timestamp | Fecha y hora de calificación | BIGINT, NOT NULL |
+
+---
+
+## 6. Implementación Física (Script SQL)
+
+```sql
+CREATE DATABASE IF NOT EXISTS moviesdatabase;
+USE moviesdatabase;
+
+-- 1. Tablas Maestras (Catálogos)
+
+CREATE TABLE collection (
+    collection_id INT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    poster_path VARCHAR(255),
+    backdrop_path VARCHAR(255),
+    UNIQUE (name)
+);
+
+CREATE TABLE genre (
+    genre_id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    UNIQUE (name)
+);
+
+CREATE TABLE keyword (
+    keyword_id INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    UNIQUE (name)
+);
+
+CREATE TABLE production_company (
+    company_id INT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE production_country (
+    iso_3166_1 CHAR(2) PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    UNIQUE (name)
+);
+
+CREATE TABLE spoken_language (
+    iso_639_1 VARCHAR(10) PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE person (
+    person_id INT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    gender INT,
+    profile_path VARCHAR(255)
+);
+
+CREATE TABLE `user` (
+    user_id INT PRIMARY KEY
+);
+
+-- 2. Tabla Principal: Movie
+
+CREATE TABLE movie (
+    movie_id INT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    original_title VARCHAR(255) NOT NULL,
+    original_language VARCHAR(10),
+    overview TEXT,
+    release_date DATE,
+    runtime INT,
+    budget DECIMAL(15,2),
+    revenue DECIMAL(15,2),
+    popularity DECIMAL(10,2),
+    vote_average DECIMAL(3,1),
+    vote_count INT,
+    adult BOOLEAN NOT NULL,
+    video BOOLEAN NOT NULL,
+    status VARCHAR(50),
+    homepage VARCHAR(255),
+    imdb_id VARCHAR(20),
+    poster_path VARCHAR(255),
+    backdrop_path VARCHAR(255),
+    tagline VARCHAR(255),
+    collection_id INT,
+    UNIQUE (imdb_id),
+    CONSTRAINT fk_movie_collection 
+        FOREIGN KEY (collection_id) REFERENCES collection(collection_id)
+);
+
+-- 3. Tablas de Relación (Junction Tables)
+
+CREATE TABLE movie_genre (
+    movie_id INT NOT NULL,
+    genre_id INT NOT NULL,
+    PRIMARY KEY (movie_id, genre_id),
+    CONSTRAINT fk_mg_movie FOREIGN KEY (movie_id) REFERENCES movie(movie_id),
+    CONSTRAINT fk_mg_genre FOREIGN KEY (genre_id) REFERENCES genre(genre_id)
+);
+
+CREATE TABLE movie_keyword (
+    movie_id INT NOT NULL,
+    keyword_id INT NOT NULL,
+    PRIMARY KEY (movie_id, keyword_id),
+    CONSTRAINT fk_mk_movie FOREIGN KEY (movie_id) REFERENCES movie(movie_id),
+    CONSTRAINT fk_mk_keyword FOREIGN KEY (keyword_id) REFERENCES keyword(keyword_id)
+);
+
+CREATE TABLE movie_production_company (
+    movie_id INT NOT NULL,
+    company_id INT NOT NULL,
+    PRIMARY KEY (movie_id, company_id),
+    CONSTRAINT fk_mpc_movie FOREIGN KEY (movie_id) REFERENCES movie(movie_id),
+    CONSTRAINT fk_mpc_company FOREIGN KEY (company_id) REFERENCES production_company(company_id)
+);
+
+CREATE TABLE movie_production_country (
+    movie_id INT NOT NULL,
+    iso_3166_1 CHAR(2) NOT NULL,
+    PRIMARY KEY (movie_id, iso_3166_1),
+    CONSTRAINT fk_mpcn_movie FOREIGN KEY (movie_id) REFERENCES movie(movie_id),
+    CONSTRAINT fk_mpcn_country FOREIGN KEY (iso_3166_1) REFERENCES production_country(iso_3166_1)
+);
+
+CREATE TABLE movie_spoken_language (
+    movie_id INT NOT NULL,
+    iso_639_1 VARCHAR(10) NOT NULL,
+    PRIMARY KEY (movie_id, iso_639_1),
+    CONSTRAINT fk_msl_movie FOREIGN KEY (movie_id) REFERENCES movie(movie_id),
+    CONSTRAINT fk_msl_language FOREIGN KEY (iso_639_1) REFERENCES spoken_language(iso_639_1)
+);
+
+CREATE TABLE `cast` (
+    movie_id INT NOT NULL,
+    person_id INT NOT NULL,
+    character_name VARCHAR(255) NOT NULL,
+    cast_order INT,
+    cast_id INT,
+    credit_id VARCHAR(50),
+    PRIMARY KEY (movie_id, person_id, credit_id),
+    CONSTRAINT fk_cast_movie FOREIGN KEY (movie_id) REFERENCES movie(movie_id),
+    CONSTRAINT fk_cast_person FOREIGN KEY (person_id) REFERENCES person(person_id)
+);
+
+CREATE TABLE crew (
+    movie_id INT NOT NULL,
+    person_id INT NOT NULL,
+    job VARCHAR(100) NOT NULL,
+    department VARCHAR(100),
+    credit_id VARCHAR(50),
+    PRIMARY KEY (movie_id, person_id, job),
+    CONSTRAINT fk_crew_movie FOREIGN KEY (movie_id) REFERENCES movie(movie_id),
+    CONSTRAINT fk_crew_person FOREIGN KEY (person_id) REFERENCES person(person_id)
+);
+
+CREATE TABLE rating (
+    user_id INT NOT NULL,
+    movie_id INT NOT NULL,
+    rating DECIMAL(3,1) NOT NULL,
+    timestamp BIGINT NOT NULL,
+    PRIMARY KEY (user_id, movie_id),
+    CONSTRAINT fk_rating_user FOREIGN KEY (user_id) REFERENCES `user` (user_id),
+    CONSTRAINT fk_rating_movie FOREIGN KEY (movie_id) REFERENCES movie(movie_id)
+);
