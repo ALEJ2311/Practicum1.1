@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ScalaCompilerConfiguration">
-    <option name="separateProdTestSources" value="true" />
-    <profile name="sbt 1" modules="Avance2,Avance2.main,Avance2.test,PracticumPF2,PracticumPF2.main,PracticumPF2.test,Prueba,Prueba.main,Prueba.test,ReactiveMovieCleaner,ReactiveMovieCleaner.main,ReactiveMovieCleaner.test,RepasoO25F26,RepasoO25F26.main,RepasoO25F26.test,ejemploqui,ejemploqui.main,ejemploqui.test,practicumpf2,practicumpf2.main,practicumpf2.test" />
-  </component>
-</project>

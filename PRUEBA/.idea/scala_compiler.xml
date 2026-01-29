@@ -2,6 +2,12 @@
 <project version="4">
   <component name="ScalaCompilerConfiguration">
     <option name="separateProdTestSources" value="true" />
-    <profile name="sbt 1" modules="Clase,Clase.main,Clase.test,PRUEBA,PRUEBA.main,PRUEBA.test" />
+    <profile name="sbt 1" modules="Clase,PRACTICUMLIMPIEZA,PRUEBA,PRUEBA.main,PRUEBA.test" />
+    <profile name="sbt 2" modules="Clase.main,Clase.test,PRACTICUMLIMPIEZA.main,PRACTICUMLIMPIEZA.test">
+      <parameters>
+        <parameter value="-Xmax-inlines" />
+        <parameter value="100" />
+      </parameters>
+    </profile>
   </component>
 </project>

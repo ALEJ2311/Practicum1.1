@@ -1,0 +1,378 @@
+=== LOG DE ERRORES DE PARSEO - 2026-01-17T23:03:53.361941400 ===
+
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 91697, 'name': 'Battlestar Galactica (Reboot) Collection', 'poster_path': '/yB7QLUglaZSCFtC30emJEqfGuWi.jpg', 'backdrop_path': '/1ynqKxPc4sgDdweAItGt4QL
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 87256, 'name': 'Beverly Hills Chihuahua Collection', 'poster_path': '/v7ofpZSklN0m2ecuHUWeO8S6ZUb.jpg', 'backdrop_path': '/jOIk7nAwq7rKLFz8h25soLVSSFf.j
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: cast ---
+Razón: illegal escape sequence (\') got '\...' (line 1, column 3135)
+Dato Original: [{'cast_id': 1, 'character': 'Michele Abbagnano', 'credit_id': '52fe4a77c3a36847f81cf81f', 'gender': 2, 'id': 37583, 'name': 'Nino Manfredi', 'order': 0, 'profile_path': '/uDnI9viHJVh9yvcfRYnGSx7mfwW.jpg'}, {'cast_id': 2, 'character': 'Ispettore Capo Ministero', 'credit_id': '52fe4a77c3a36847f81cf823', 'gender': 2, 'id': 9920, 'name': 'Adolfo Celi', 'order': 1, 'profile_path': '/3i7iHbPKTMYAlg6OciBfuKxTE97.jpg'}, {'cast_id': 4, 'character': 'Improta, un borsaiolo', 'credit_id': '52fe4a77c3a36847f81cf82b', 'gender': 2, 'id': 11223, 'name': 'Vittorio Caprioli', 'order': 2, 'profile_path': '/rk3y1tWI5wMl6MAJvhMvNh3yoJN.jpg'}, {'cast_id': 18, 'character': 'Giuseppe Sanguigno, il capotreno', 'credit_id': '596f725b9251412d3d023c19', 'gender': 2, 'id': 387731, 'name': 'Silvio Spaccesi', 'order': 3, 'profile_path': '/mTpF0djDHw28NzMnmFYJJyMqmCD.jpg'}, {'cast_id': 5, 'character': 'Amitrano', 'credit_id': '52fe4a77c3a36847f81cf82f', 'gender': 0, 'id': 23734, 'name': 'Vittorio Mezzogiorno', 'order': 4, 'profile_path': '/5UhQuc8E9tRWdvJSe3CqZTRqqJf.jpg'}, {'cast_id': 19, 'character': 'Califano', 'credit_id': '596f726e925141079900db7a', 'gender': 0, 'id': 120117, 'name': 'Antonio Allocca', 'order': 5, 'profile_path': '/1ERsGnzl4VEy5jc6lH10t8MDxaE.jpg'}, {'cast_id': 7, 'character': 'Antonio Cammarota', 'credit_id': '52fe4a77c3a36847f81cf837', 'gender': 0, 'id': 106346, 'name': 'Gigi Reder', 'order': 6, 'profile_path': '/2ByoLvDhtlOomYNtIIbGdQQQKkN.jpg'}, {'cast_id': 21, 'character': 'Zappacosta, il capostazione', 'credit_id': '596f7295c3a3687fc70214e3', 'gender': 0, 'id': 134215, 'name': 'Nino Terzo', 'order': 8, 'profile_path': '/vDu5NDG0q4EIcgEAh4umXf8EEBT.jpg'}, {'cast_id': 22, 'character': 'passeggero del treno', 'credit_id': '596f72a6c3a3686b0400e39e', 'gender': 2, 'id': 141557, 'name': 'Roberto Della Casa', 'order': 9, 'profile_path': '/gTxL1u2ZBwzvdLO7NJkYtdr6HLJ.jpg'}, {'cast_id': 23, 'character': 'Nicola Scognamiglio, il controllore influenzato', 'credit_id': '596f72b69251412d41022c74', 'gender': 0, 'id': 1849063, 'name': 'Gerardo Scala', 'order': 10, 'profile_path': None}, {'cast_id': 24, 'character': 'Vigorito, controllore ubriacone', 'credit_id': '596f72c4c3a368712800ec71', 'gender': 0, 'id': 1854447, 'name': 'Luigi Basagaluppi', 'order': 11, 'profile_path': None}, {'cast_id': 25, 'character': 'Imbastaro, passeggero strabico', 'credit_id': '596f72d89251416c6700859c', 'gender': 2, 'id': 119992, 'name': 'Leo Gullotta', 'order': 12, 'profile_path': '/hKncdyXBTdoj6jB3EcpVIGwySLT.jpg'}, {'cast_id': 26, 'character': 'vecchia passeggera', 'credit_id': '596f72e5c3a3686b5a01add0', 'gender': 0, 'id': 130616, 'name': 'Ester Carloni', 'order': 13, 'profile_path': '/ay6s70sW7eRHARLYTxmvRDTNpXh.jpg'}, {'cast_id': 27, 'character': 'operaio con mignolo fasciato', 'credit_id': '596f72f4c3a3686fc70090a4', 'gender': 0, 'id': 1854449, 'name': 'Italo Celoro', 'order': 14, 'profile_path': None}, {'cast_id': 6, 'character': 'Il prete', 'credit_id': '52fe4a77c3a36847f81cf833', 'gender': 2, 'id': 45983, 'name': 'Nino Vingelli', 'order': 15, 'profile_path': None}, {'cast_id': 28, 'character': 'Gennaro "O\'Mbroglione"', 'credit_id': '596f7301c3a3687fc7021531', 'gender': 2, 'id': 45983, 'name': 'Nino Vingelli', 'order': 16, 'profile_path': None}, {'cast_id': 29, 'character': 'imprenditrice Valmarana', 'credit_id': '596f730ec3a3686fc70090bf', 'gender': 1, 'id': 100058, 'name': 'Clara Colosimo', 'order': 17, 'profile_path': '/4VDJJCzTNyC8kbH6mj6xN3m4L08.jpg'}, {'cast_id': 30, 'character': "ragioniere dell'imprenditrice", 'credit_id': '596f731b9251416c670085cd', 'gender': 2, 'id': 228158, 'name': 'Maurizio Micheli', 'order': 18, 'profile_path': '/vv3b25Y1jMnNcuIpTRtns9piuT.jpg'}, {'cast_id': 31, 'character': 'Picone', 'credit_id': '596f7329c3a368712800ece1', 'gender': 0, 'id': 1292214, 'name': 'Vittorio Marsiglia', 'order': 19, 'profile_path': None}, {'cast_id': 32, 'character': 'Liberata', 'credit_id': '596f73359251416c670085ed', 'gender': 1, 'id': 51740, 'name': 'Marisa Laurito', 'order': 20, 'profile_path': '/gEJNxi55zYb05uELeoOdfWsd8aJ.jpg'}, {'cast_id': 33, 'character': 'Ferdinando', 'credit_id': '596f73429251412d4c022460', 'gender': 0, 'id': 1176835, 'name': 'Marzio Honorato', 'order': 21, 'profile_path': '/yt9PYV8vhNtxlUrFd000lp5RRzA.jpg'}, {'cast_id': 34, 'character': '"Cazzillo" Abbagnano, figlio di Michele', 'credit_id': '596f73519251412d41022d04', 'gender': 0, 'id': 1854451, 'name': 'Giovanni Piscopo', 'order': 22, 'profile_path': None}, {'cast_id': 35, 'character': 'maresciallo Panepino', 'credit_id': '596f7360925141079900dc27', 'gender': 0, 'id': 103627, 'name': 'Tano Cimarosa', 'order': 23, 'profile_path': '/x4A4eKik5JxvHWjj9828MgpkzGM.jpg'}, {'cast_id': 3, 'character': 'Suor Camilla', 'credit_id': '52fe4a77c3a36847f81cf827', 'gender': 1, 'id': 27642, 'name': 'Lina Sastri', 'order': 24, 'profile_path': '/tHCUGHYqZRlWRnCKVoPwT6iY9Y8.jpg'}, {'cast_id': 17, 'character': 'La contrabbandiera di radioline', 'credit_id': '53fc87f4c3a368734f0065d1', 'gender': 1, 'id': 44421, 'name': 'Elisa Mainardi', 'order': 25, 'profile_path': '/aeK2epnIFOOX8ad0d34Qzn2wC2U.jpg'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: keywords ---
+Razón: illegal escape sequence (\x) got '\...' (line 1, column 171)
+Dato Original: [{'id': 4928, 'name': 'bait'}, {'id': 8608, 'name': 'violinist'}, {'id': 13015, 'name': 'terrorism'}, {'id': 173242, 'name': 'modeling'}, {'id': 173244, 'name': 'waiterss\xa0'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 114374, 'name': 'Fist of the North Star: The Legends of the True Savior', 'poster_path': '/mZujROFuRvGjSzl3MJOfQQvhtpa.jpg', 'backdrop_path': '/qvukxg0e
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 284433, 'name': 'Guardians of the Galaxy Collection', 'poster_path': '/iL8mukexAqEg0xK783rG561tdd8.jpg', 'backdrop_path': '/jdyyjulTBU8YUYAUvQFj6U1g2Pj.
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 173710, 'name': 'Planet of the Apes (Reboot) Collection', 'poster_path': '/qQrEMycfVN2gRlKTLWGn0QdOnSk.jpg', 'backdrop_path': '/mepJpyqVtD6P65vgCU1ngGFE
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: keywords ---
+Razón: illegal escape sequence (\x) got '\...' (line 1, column 286)
+Dato Original: [{'id': 10292, 'name': 'gore'}, {'id': 14687, 'name': 'extreme violence'}, {'id': 186410, 'name': 'extreme blood'}, {'id': 186411, 'name': 'slow motion action scene'}, {'id': 186413, 'name': 'ultra slow motion'}, {'id': 186416, 'name': 'gruesome'}, {'id': 186417, 'name': 'bloody spray\xa0'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 141290, 'name': 'The Lord of the Rings Animated Collection', 'poster_path': '/pQuazFOlGRdn2Lb3oWFJYPeASOc.jpg', 'backdrop_path': '/uUG532EWfyhtKDzsA0sLb
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 261382, 'name': "Clint Eastwood's Iwo Jima Collection", 'poster_path': '/rnRE6JGz9yjYUAbWIHYkGu9B8pj.jpg', 'backdrop_path': '/dIYpFavJ8vNCv9pefEabsUL1pD
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 425164, 'name': 'Dragon Ball Z (Movie) Collection', 'poster_path': '/2VMZ1zRFPnUQtQp5K4WRXvDYBjh.jpg', 'backdrop_path': '/7PcbijxTfwi9vjWEfXdS0ReAw8q.jp
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: keywords ---
+Razón: illegal escape sequence (\x) got '\...' (line 1, column 216)
+Dato Original: [{'id': 2020, 'name': 'revolution'}, {'id': 2210, 'name': 'climate change'}, {'id': 5113, 'name': 'overpopulation'}, {'id': 178026, 'name': 'environmental conservation'}, {'id': 185218, 'name': 'environmental change\xa0'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: cast ---
+Razón: illegal escape sequence (\') got '\...' (line 1, column 1296)
+Dato Original: [{'cast_id': 3, 'character': 'Ulysses Everett McGill', 'credit_id': '52fe421cc3a36847f8004ccb', 'gender': 2, 'id': 1461, 'name': 'George Clooney', 'order': 0, 'profile_path': '/esyiULfB7kSrhgzBkLamjsTTKEg.jpg'}, {'cast_id': 4, 'character': 'Pete Hogwallop', 'credit_id': '52fe421cc3a36847f8004ccf', 'gender': 2, 'id': 1241, 'name': 'John Turturro', 'order': 1, 'profile_path': '/70V4hwvWN0J3aX2LzQg7eKCeq29.jpg'}, {'cast_id': 5, 'character': "Delmar O'Donnell", 'credit_id': '52fe421cc3a36847f8004cd3', 'gender': 2, 'id': 1462, 'name': 'Tim Blake Nelson', 'order': 2, 'profile_path': '/tWHHEnnoEU6aNaiFRvl1WLfNTvB.jpg'}, {'cast_id': 6, 'character': 'Daniel "Big Dan" Teague', 'credit_id': '52fe421cc3a36847f8004cd7', 'gender': 2, 'id': 1230, 'name': 'John Goodman', 'order': 3, 'profile_path': '/eOIx8zj1vYIRhVY2bK5cjIQfua0.jpg'}, {'cast_id': 7, 'character': 'Penny Wharvey-McGill', 'credit_id': '52fe421cc3a36847f8004cdb', 'gender': 1, 'id': 18686, 'name': 'Holly Hunter', 'order': 4, 'profile_path': '/sfqLoSx2dmfQTafqbv8lNHnBeUW.jpg'}, {'cast_id': 8, 'character': 'Tommy Johnson', 'credit_id': '52fe421cc3a36847f8004cdf', 'gender': 2, 'id': 1465, 'name': 'Chris Thomas King', 'order': 5, 'profile_path': '/hUeI7GRVoOqpqOeEYObuGIYTuIi.jpg'}, {'cast_id': 9, 'character': 'Menelaus "Pappy" O\'Daniel', 'credit_id': '52fe421cc3a36847f8004ce3', 'gender': 2, 'id': 1466, 'name': 'Charles Durning', 'order': 6, 'profile_path': '/cDbNCqLStv13MW8W6DZ504xsbrz.jpg'}, {'cast_id': 10, 'character': "Junior O'Daniel", 'credit_id': '52fe421cc3a36847f8004ce7', 'gender': 0, 'id': 1467, 'name': 'Del Pentecost', 'order': 7, 'profile_path': '/dDGWISV97kvrTFGsLAnnKwR766g.jpg'}, {'cast_id': 11, 'character': 'George Nelson', 'credit_id': '52fe421cc3a36847f8004ceb', 'gender': 2, 'id': 1010, 'name': 'Michael Badalucco', 'order': 8, 'profile_path': '/oK2pSu2FWyrwiPEch7Tux2GSMbK.jpg'}, {'cast_id': 12, 'character': "Pappy's Staff", 'credit_id': '52fe421cc3a36847f8004cef', 'gender': 2, 'id': 1468, 'name': 'J.R. Horne', 'order': 9, 'profile_path': '/kwXWf5gEZGWyqRDu5VjXAoll1Hw.jpg'}, {'cast_id': 13, 'character': "Pappy's Staff", 'credit_id': '52fe421cc3a36847f8004cf3', 'gender': 2, 'id': 1469, 'name': 'Brian Reddy', 'order': 10, 'profile_path': '/6AOxOUfyU3iDQabWL6EipPZ5DAM.jpg'}, {'cast_id': 14, 'character': 'Homer Stokes', 'credit_id': '52fe421cc3a36847f8004cf7', 'gender': 2, 'id': 1470, 'name': 'Wayne Duvall', 'order': 11, 'profile_path': '/zCgi06IEyC3BM36PuscNdcXCTAC.jpg'}, {'cast_id': 15, 'character': 'The Little Man', 'credit_id': '52fe421cc3a36847f8004cfb', 'gender': 2, 'id': 1471, 'name': 'Ed Gale', 'order': 12, 'profile_path': '/nT29IOEnFLknnx1MccIiPug014d.jpg'}, {'cast_id': 16, 'character': 'Vernon T. Waldrip', 'credit_id': '52fe421cc3a36847f8004cff', 'gender': 2, 'id': 1472, 'name': 'Ray McKinnon', 'order': 13, 'profile_path': '/gjZv4RQfPrOQEn0QRuR1G7HEz0D.jpg'}, {'cast_id': 17, 'character': 'Sheriff Cooley', 'credit_id': '52fe421cc3a36847f8004d03', 'gender': 2, 'id': 1473, 'name': 'Daniel von Bargen', 'order': 14, 'profile_path': '/fFiiZCvBCqQ4xmCzYpMJQ7xboP3.jpg'}, {'cast_id': 18, 'character': 'Siren', 'credit_id': '52fe421cc3a36847f8004d07', 'gender': 1, 'id': 1474, 'name': 'Mia Tate', 'order': 15, 'profile_path': '/k4IrjpdvL8S3SxAaEG6ZWOrwI9G.jpg'}, {'cast_id': 19, 'character': 'Siren', 'credit_id': '52fe421cc3a36847f8004d0b', 'gender': 1, 'id': 1475, 'name': 'Musetta Vander', 'order': 16, 'profile_path': '/HcCn2iICHNyp2PmEXN72gSuRp9.jpg'}, {'cast_id': 20, 'character': 'Siren', 'credit_id': '52fe421cc3a36847f8004d0f', 'gender': 0, 'id': 1476, 'name': 'Christy Taylor', 'order': 17, 'profile_path': '/3zCh1SxymUG3zL9pcm2C5cpPUPs.jpg'}, {'cast_id': 21, 'character': 'Pomade Vendor', 'credit_id': '52fe421cc3a36847f8004d13', 'gender': 0, 'id': 1478, 'name': 'Millford Fortenberry', 'order': 18, 'profile_path': '/wgsNdU3K2z55zgHTq2s6x5B968X.jpg'}, {'cast_id': 22, 'character': 'Washington B. "Wash" Hogwallop', 'credit_id': '52fe421cc3a36847f8004d17', 'gender': 2, 'id': 1479, 'name': 'Frank Collison', 'order': 19, 'profile_path': '/aOxF97sEwgP8fUAR16Ngw9DuWog.jpg'}, {'cast_id': 23, 'character': 'Boy Hogwallop', 'credit_id': '52fe421cc3a36847f8004d1b', 'gender': 0, 'id': 1480, 'name': 'Quinn Gasaway', 'order': 20, 'profile_path': '/cyROOJDqc7BVtHrgMCForH6Cj6c.jpg'}, {'cast_id': 24, 'character': 'Blind Seer', 'credit_id': '52fe421cc3a36847f8004d1f', 'gender': 2, 'id': 1481, 'name': 'Lee Weaver', 'order': 21, 'profile_path': '/8XnZM7YOWSqdUgPXNLZBWuDQ6Nl.jpg'}, {'cast_id': 59, 'character': 'Mr. Lund', 'credit_id': '57b72e36c3a3681484001ef6', 'gender': 2, 'id': 17401, 'name': 'Stephen Root', 'order': 22, 'profile_path': '/sceCvLiv8xe2jQzrVn39wvosVHG.jpg'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 141290, 'name': 'The Lord of the Rings Animated Collection', 'poster_path': '/pQuazFOlGRdn2Lb3oWFJYPeASOc.jpg', 'backdrop_path': '/uUG532EWfyhtKDzsA0sLb
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 256296, 'name': 'Silent Night, Deadly Night Collection', 'poster_path': '/4FqLNnITkZza1QKyTd5nprion1y.jpg', 'backdrop_path': '/wZM7UP8tdoZLHUgV4Lj5ixSqK
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 290973, 'name': 'Crouching Tiger, Hidden Dragon Collection', 'poster_path': '/8x9ajHWUm5K5rdMRvXe2vhjdLAk.jpg', 'backdrop_path': '/fWbparTMpxYDgutCf9LLl
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: keywords ---
+Razón: illegal escape sequence (\x) got '\...' (line 1, column 271)
+Dato Original: [{'id': 6930, 'name': 'fondling'}, {'id': 10183, 'name': 'independent film'}, {'id': 155518, 'name': 'nouvelle vague'}, {'id': 170268, 'name': 'skipping school'}, {'id': 170272, 'name': 'mise en scene'}, {'id': 170273, 'name': 'fingerprinting'}, {'id': 170279, 'name': '\xa0mugshot'}, {'id': 170286, 'name': 'strict teacher'}, {'id': 170293, 'name': 'montmartre paris'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 185682, 'name': 'The Adventures of Antoine Doinel', 'poster_path': '/66hyq0YtgBjrfT2kB1YJu33UDcy.jpg', 'backdrop_path': '/hT6f042PKqsMjt0t8vPEE7yocKj.jp
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 45355, 'name': 'Kevin Smith: Silent Bob Speaks!', 'poster_path': '/ucUCJgbhOAwXkncRR9bQAf3w2DL.jpg', 'backdrop_path': '/6MPnOaO8zGbOcMwkF0zFbDn3FVr.jpg'
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 1582, 'name': 'Teenage Mutant Ninja Turtles (Original) Collection', 'poster_path': '/9TLc09TqYi0Ct3zmUeHGwVxLHhq.jpg', 'backdrop_path': '/7dusELv6x1ANRG
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 1582, 'name': 'Teenage Mutant Ninja Turtles (Original) Collection', 'poster_path': '/9TLc09TqYi0Ct3zmUeHGwVxLHhq.jpg', 'backdrop_path': '/7dusELv6x1ANRG
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 1582, 'name': 'Teenage Mutant Ninja Turtles (Original) Collection', 'poster_path': '/9TLc09TqYi0Ct3zmUeHGwVxLHhq.jpg', 'backdrop_path': '/7dusELv6x1ANRG
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 169740, 'name': 'The Haunting in Connecticut Collection', 'poster_path': '/6uIGXwqIfdg0IQw3bvfS49VMKHh.jpg', 'backdrop_path': '/1sWTV5QaoDnBTTSbElUfe5zB
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 151, 'name': 'Star Trek: The Original Series Collection', 'poster_path': '/zcB8KxHA4EapOoZZPAvwgmE1iGK.jpg', 'backdrop_path': '/9BQj9hq0aK6yM9Tm2NJ28jg5
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 151, 'name': 'Star Trek: The Original Series Collection', 'poster_path': '/zcB8KxHA4EapOoZZPAvwgmE1iGK.jpg', 'backdrop_path': '/9BQj9hq0aK6yM9Tm2NJ28jg5
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 151, 'name': 'Star Trek: The Original Series Collection', 'poster_path': '/zcB8KxHA4EapOoZZPAvwgmE1iGK.jpg', 'backdrop_path': '/9BQj9hq0aK6yM9Tm2NJ28jg5
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 446782, 'name': 'The Disappearance Of Eleanor Rigby', 'poster_path': '/xg3F3P9becOjNqYHlMuBcWPXU5G.jpg', 'backdrop_path': '/3eyH0cwrBdrSCwKF24oOwy8fO7O.
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 937, 'name': 'The Pink Panther (Original) Collection', 'poster_path': '/xu6gZ0zGUSR8SC2QLKFaUrX2niM.jpg', 'backdrop_path': '/6KE7AguGR3UqwUn5RkzkoBc3MLy
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 91746, 'name': "Bill & Ted's Most Excellent Collection", 'poster_path': '/e8ytcWY0r32q3RdNJDnv5KRh9hC.jpg', 'backdrop_path': '/m7KWyG7VwXoPbwr3DgeDqed8q
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 91746, 'name': "Bill & Ted's Most Excellent Collection", 'poster_path': '/e8ytcWY0r32q3RdNJDnv5KRh9hC.jpg', 'backdrop_path': '/m7KWyG7VwXoPbwr3DgeDqed8q
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 151, 'name': 'Star Trek: The Original Series Collection', 'poster_path': '/zcB8KxHA4EapOoZZPAvwgmE1iGK.jpg', 'backdrop_path': '/9BQj9hq0aK6yM9Tm2NJ28jg5
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 1709, 'name': 'Planet of the Apes Original Collection', 'poster_path': '/r7TBDEcpBAuFoqdtUz7z2nSeFej.jpg', 'backdrop_path': '/eYf3GRnuVCgeFQfEo0qK7ua5rC
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 1709, 'name': 'Planet of the Apes Original Collection', 'poster_path': '/r7TBDEcpBAuFoqdtUz7z2nSeFej.jpg', 'backdrop_path': '/eYf3GRnuVCgeFQfEo0qK7ua5rC
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 1709, 'name': 'Planet of the Apes Original Collection', 'poster_path': '/r7TBDEcpBAuFoqdtUz7z2nSeFej.jpg', 'backdrop_path': '/eYf3GRnuVCgeFQfEo0qK7ua5rC
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 105625, 'name': 'House of 1000 Corpses Collection', 'poster_path': '/7xpo52YDhHNFG5qdrLxhG58k0ke.jpg', 'backdrop_path': '/osLewbX6FJMy1iUcNHm6hoiNH0j.jp
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 1709, 'name': 'Planet of the Apes Original Collection', 'poster_path': '/r7TBDEcpBAuFoqdtUz7z2nSeFej.jpg', 'backdrop_path': '/eYf3GRnuVCgeFQfEo0qK7ua5rC
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 456576, 'name': 'Journey to the West Collection', 'poster_path': '/nfjhqCr1t9l4iKddQ5q3dgZ5rEb.jpg', 'backdrop_path': '/r0zfRbA5lfP3QBQ9bHw97bwJaUG.jpg'
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 151, 'name': 'Star Trek: The Original Series Collection', 'poster_path': '/zcB8KxHA4EapOoZZPAvwgmE1iGK.jpg', 'backdrop_path': '/9BQj9hq0aK6yM9Tm2NJ28jg5
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: cast ---
+Razón: illegal escape sequence (\') got '\...' (line 1, column 710)
+Dato Original: [{'cast_id': 1, 'character': 'brigadiere Silvio Camurati', 'credit_id': '52fe4d2dc3a36847f8252ea7', 'gender': 0, 'id': 119991, 'name': 'Renato Pozzetto', 'order': 0, 'profile_path': '/3IKLQxX62CV1UGjGZHxlBinirEw.jpg'}, {'cast_id': 2, 'character': 'brigadiere Vasco Sacchetti', 'credit_id': '52fe4d2dc3a36847f8252eab', 'gender': 0, 'id': 21237, 'name': 'Enrico Montesano', 'order': 1, 'profile_path': '/dT36zWCGwz7RMoyWi4xR019ak0q.jpg'}, {'cast_id': 3, 'character': 'Proietti, detto "Er Soffia"', 'credit_id': '52fe4d2dc3a36847f8252eaf', 'gender': 2, 'id': 994274, 'name': 'Victor Cavallo', 'order': 2, 'profile_path': '/iwbRCJCVlFkTTrUfkJE01rwzDG0.jpg'}, {'cast_id': 4, 'character': 'Angelo Bertoli, detto l\'"Americano"', 'credit_id': '52fe4d2dc3a36847f8252eb3', 'gender': 2, 'id': 120630, 'name': 'Angelo Bernabucci', 'order': 3, 'profile_path': '/ivYpQFA8bvsKcz8NpN6gYbQcaT4.jpg'}, {'cast_id': 5, 'character': 'Tarallo', 'credit_id': '52fe4d2dc3a36847f8252eb7', 'gender': 0, 'id': 23370, 'name': 'Francesco De Rosa', 'order': 4, 'profile_path': '/hzvnR5AzbbHC0s40ezvNTqn98hE.jpg'}, {'cast_id': 6, 'character': 'capo della narcotici', 'credit_id': '52fe4d2dc3a36847f8252ebb', 'gender': 0, 'id': 1014913, 'name': 'Pino Ammendola', 'order': 5, 'profile_path': '/kgkGgGFiKPV0DDqRMXQ6vzJ8A2t.jpg'}, {'cast_id': 7, 'character': 'signora Motta', 'credit_id': '52fe4d2dc3a36847f8252ebf', 'gender': 1, 'id': 1083107, 'name': 'Mirella Falco', 'order': 6, 'profile_path': '/bi73tyYuWbjRLBduzkdhATquhyQ.jpg'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 151, 'name': 'Star Trek: The Original Series Collection', 'poster_path': '/zcB8KxHA4EapOoZZPAvwgmE1iGK.jpg', 'backdrop_path': '/9BQj9hq0aK6yM9Tm2NJ28jg5
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: keywords ---
+Razón: illegal escape sequence (\x) got '\...' (line 1, column 100)
+Dato Original: [{'id': 6075, 'name': 'sport'}, {'id': 6188, 'name': 'bad father-in-law'}, {'id': 166779, 'name': '\xa0armwrestling'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: keywords ---
+Razón: illegal escape sequence (\x) got '\...' (line 1, column 475)
+Dato Original: [{'id': 237, 'name': 'gay'}, {'id': 572, 'name': 'sex'}, {'id': 740, 'name': 'aids'}, {'id': 4344, 'name': 'musical'}, {'id': 9766, 'name': 'hiv'}, {'id': 10181, 'name': 'based on play or musical'}, {'id': 12532, 'name': 'african american'}, {'id': 155482, 'name': 'rock opera'}, {'id': 156091, 'name': 'missing person'}, {'id': 165770, 'name': 'hiv positive'}, {'id': 165787, 'name': 'home movie'}, {'id': 165798, 'name': 'mugging'}, {'id': 165803, 'name': 'telephone call \xa0'}, {'id': 199856, 'name': 'lower east side'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 295, 'name': 'Pirates of the Caribbean Collection', 'poster_path': '/zT5UKFhq9nk97VGlBbAxlAK8UFN.jpg', 'backdrop_path': '/cnKAGbX1rDkAquF2V1wVkptHDJO.jp
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 133830, 'name': 'Star Wars: The Ewok Adventures Collection', 'poster_path': '/iY9Smj4RQB1ey8QB0JcMtV35uc1.jpg', 'backdrop_path': '/9IwrTRYGaxrlbRjCs7UBR
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: keywords ---
+Razón: illegal escape sequence (\x) got '\...' (line 1, column 283)
+Dato Original: [{'id': 6083, 'name': 'politician'}, {'id': 10508, 'name': 'teacher'}, {'id': 10909, 'name': 'lawyer'}, {'id': 11038, 'name': 'trial'}, {'id': 33519, 'name': 'courtroom'}, {'id': 34152, 'name': 'evolution'}, {'id': 156810, 'name': 'science'}, {'id': 165803, 'name': 'telephone call \xa0'}, {'id': 171497, 'name': 'rhetoric'}, {'id': 196497, 'name': 'scopes monkey trial'}, {'id': 207968, 'name': 'judiciary'}, {'id': 214780, 'name': 'courtroom drama'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 115570, 'name': 'Star Trek: The Next Generation Collection', 'poster_path': '/sddV6vaUC6x37icJS3opIXTXB07.jpg', 'backdrop_path': '/r7MMQenUURHhAVHFymtOb
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 125574, 'name': 'The Amazing Spider-Man Collection', 'poster_path': '/moNJa86FgDYy8SWeDym2gnsLLMa.jpg', 'backdrop_path': '/aLrNTcLN2kDu9jAJ4tS5haiWGc6.j
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 52749, 'name': 'The Butterfly Effect Collection', 'poster_path': '/8lkeUgXNSB0foS3wU7rkuMTdMKV.jpg', 'backdrop_path': '/7DsbbkQAKSci07Jp4fJVq3QXSEF.jpg'
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 278467, 'name': 'TrilogÃ­a de la violencia de Michael Haneke', 'poster_path': '/3255nToAwUbGrpwSpZRN6ZEizXp.jpg', 'backdrop_path': '/jG44SCGglfYaFeMK2qQM
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 115570, 'name': 'Star Trek: The Next Generation Collection', 'poster_path': '/sddV6vaUC6x37icJS3opIXTXB07.jpg', 'backdrop_path': '/r7MMQenUURHhAVHFymtOb
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: keywords ---
+Razón: illegal escape sequence (\x) got '\...' (line 1, column 394)
+Dato Original: [{'id': 1454, 'name': 'treasure'}, {'id': 1529, 'name': 'buddhist monk'}, {'id': 5295, 'name': 'planetary configuration'}, {'id': 5959, 'name': 'angkor wat'}, {'id': 5960, 'name': 'illuminati'}, {'id': 5961, 'name': 'william blake'}, {'id': 6956, 'name': 'treasure hunt'}, {'id': 41586, 'name': 'archaeologist'}, {'id': 41645, 'name': 'based on video game'}, {'id': 184134, 'name': 'archeology\xa0'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: keywords ---
+Razón: illegal escape sequence (\x) got '\...' (line 1, column 451)
+Dato Original: [{'id': 483, 'name': 'riddle'}, {'id': 1454, 'name': 'treasure'}, {'id': 1456, 'name': 'medallion'}, {'id': 3510, 'name': 'kenia'}, {'id': 5127, 'name': 'alexander the great'}, {'id': 5962, 'name': "pandora's box"}, {'id': 5964, 'name': 'chinese mafia'}, {'id': 6956, 'name': 'treasure hunt'}, {'id': 12354, 'name': 'hong kong'}, {'id': 41586, 'name': 'archaeologist'}, {'id': 41645, 'name': 'based on video game'}, {'id': 184134, 'name': 'archeology\xa0'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 115570, 'name': 'Star Trek: The Next Generation Collection', 'poster_path': '/sddV6vaUC6x37icJS3opIXTXB07.jpg', 'backdrop_path': '/r7MMQenUURHhAVHFymtOb
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 115570, 'name': 'Star Trek: The Next Generation Collection', 'poster_path': '/sddV6vaUC6x37icJS3opIXTXB07.jpg', 'backdrop_path': '/r7MMQenUURHhAVHFymtOb
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: keywords ---
+Razón: illegal escape sequence (\x) got '\...' (line 1, column 180)
+Dato Original: [{'id': 483, 'name': 'riddle'}, {'id': 1454, 'name': 'treasure'}, {'id': 6956, 'name': 'treasure hunt'}, {'id': 41586, 'name': 'archaeologist'}, {'id': 184134, 'name': 'archeology\xa0'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 103577, 'name': 'The Whole Nine/Ten Yards Collection', 'poster_path': '/m6tkyCcOm4wzklAvsT0jyaM5mgY.jpg', 'backdrop_path': '/ttaiuuOHjYLTszcbADBZImqRK5H
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 126209, 'name': 'Halloween (Rob Zombie Series) Collection', 'poster_path': '/eFfRMP387MTJ4jl0gcE5jvS9XXN.jpg', 'backdrop_path': '/tXXPOkcFLcDiJ4OU5SOU3J
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 103577, 'name': 'The Whole Nine/Ten Yards Collection', 'poster_path': '/m6tkyCcOm4wzklAvsT0jyaM5mgY.jpg', 'backdrop_path': '/ttaiuuOHjYLTszcbADBZImqRK5H
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: keywords ---
+Razón: illegal escape sequence (\x) got '\...' (line 1, column 602)
+Dato Original: [{'id': 83, 'name': 'saving the world'}, {'id': 483, 'name': 'riddle'}, {'id': 1294, 'name': 'whip'}, {'id': 1454, 'name': 'treasure'}, {'id': 1547, 'name': 'mexico city'}, {'id': 2650, 'name': 'leather jacket'}, {'id': 4276, 'name': 'machinegun'}, {'id': 4939, 'name': 'alien phenomenons'}, {'id': 5566, 'name': 'maya civilization'}, {'id': 5967, 'name': 'peru'}, {'id': 6956, 'name': 'treasure hunt'}, {'id': 9830, 'name': 'nuclear explosion'}, {'id': 18524, 'name': 'refrigerator'}, {'id': 41586, 'name': 'archaeologist'}, {'id': 176731, 'name': 'indiana jones'}, {'id': 184134, 'name': 'archeology\xa0'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 295, 'name': 'Pirates of the Caribbean Collection', 'poster_path': '/zT5UKFhq9nk97VGlBbAxlAK8UFN.jpg', 'backdrop_path': '/cnKAGbX1rDkAquF2V1wVkptHDJO.jp
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 218406, 'name': 'Frankenstein (Universal Series)', 'poster_path': '/2PJYpPHOqnVMXelHV1T4t6zra4i.jpg', 'backdrop_path': '/oR3GHwhvOcjn124b7wOZl9SHh8G.jpg
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 122922, 'name': 'In the Name of the King Collection', 'poster_path': '/kxqvnKbKX2MW2xfeGAGvlFSECSj.jpg', 'backdrop_path': '/rJaHFKkYvtnjjJ58L9W5KgYxA6w.
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: keywords ---
+Razón: illegal escape sequence (\x) got '\...' (line 1, column 233)
+Dato Original: [{'id': 818, 'name': 'based on novel'}, {'id': 6054, 'name': 'friendship'}, {'id': 10683, 'name': 'coming of age'}, {'id': 169875, 'name': 'railroad track'}, {'id': 169878, 'name': 'story within the story'}, {'id': 169885, 'name': '\xa0flipping coin'}, {'id': 169886, 'name': 'campfire story'}, {'id': 169887, 'name': 'reference to superman'}, {'id': 169895, 'name': 'normandy beach'}, {'id': 208349, 'name': 'child'}, {'id': 208611, 'name': '1950s'}, {'id': 216919, 'name': 'boys'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 420, 'name': 'The Chronicles of Narnia Collection', 'poster_path': '/sh6Kn8VBfXotJ6qsvJkdfscxXKR.jpg', 'backdrop_path': '/ojjzZUQlqKTsN1T7s5OAVZSjYMH.jp
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 95891, 'name': 'In China They Eat Dogs Collection', 'poster_path': '/ws7sHs7oVSoVgrLTlEitJ2mJGR8.jpg', 'backdrop_path': '/jeH6MaDD1CnZ8TLupBAi0DYWn2F.jp
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 185682, 'name': 'The Adventures of Antoine Doinel', 'poster_path': '/66hyq0YtgBjrfT2kB1YJu33UDcy.jpg', 'backdrop_path': '/hT6f042PKqsMjt0t8vPEE7yocKj.jp
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 185682, 'name': 'The Adventures of Antoine Doinel', 'poster_path': '/66hyq0YtgBjrfT2kB1YJu33UDcy.jpg', 'backdrop_path': '/hT6f042PKqsMjt0t8vPEE7yocKj.jp
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 115225, 'name': 'Children of the Corn Collection', 'poster_path': '/v6auJblMcNxUmZx23mQXMHmzyY3.jpg', 'backdrop_path': '/g4aK8Up5zSegesJdMYbxDcndn20.jpg
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 115225, 'name': 'Children of the Corn Collection', 'poster_path': '/v6auJblMcNxUmZx23mQXMHmzyY3.jpg', 'backdrop_path': '/g4aK8Up5zSegesJdMYbxDcndn20.jpg
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 115225, 'name': 'Children of the Corn Collection', 'poster_path': '/v6auJblMcNxUmZx23mQXMHmzyY3.jpg', 'backdrop_path': '/g4aK8Up5zSegesJdMYbxDcndn20.jpg
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 115225, 'name': 'Children of the Corn Collection', 'poster_path': '/v6auJblMcNxUmZx23mQXMHmzyY3.jpg', 'backdrop_path': '/g4aK8Up5zSegesJdMYbxDcndn20.jpg
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 115225, 'name': 'Children of the Corn Collection', 'poster_path': '/v6auJblMcNxUmZx23mQXMHmzyY3.jpg', 'backdrop_path': '/g4aK8Up5zSegesJdMYbxDcndn20.jpg
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 115225, 'name': 'Children of the Corn Collection', 'poster_path': '/v6auJblMcNxUmZx23mQXMHmzyY3.jpg', 'backdrop_path': '/g4aK8Up5zSegesJdMYbxDcndn20.jpg
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 185682, 'name': 'The Adventures of Antoine Doinel', 'poster_path': '/66hyq0YtgBjrfT2kB1YJu33UDcy.jpg', 'backdrop_path': '/hT6f042PKqsMjt0t8vPEE7yocKj.jp
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 185682, 'name': 'The Adventures of Antoine Doinel', 'poster_path': '/66hyq0YtgBjrfT2kB1YJu33UDcy.jpg', 'backdrop_path': '/hT6f042PKqsMjt0t8vPEE7yocKj.jp
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 185667, 'name': 'The Complete Monterey Pop Festival', 'poster_path': '/o03FNvDOE2iJWdLl3a6MYZEZ6rd.jpg', 'backdrop_path': '/4gC9E9mjsjaoZIY86W7cUbajUJU.
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: keywords ---
+Razón: illegal escape sequence (\x) got '\...' (line 1, column 309)
+Dato Original: [{'id': 4543, 'name': 'thanksgiving'}, {'id': 33809, 'name': 'receptionist'}, {'id': 167948, 'name': 'slob'}, {'id': 167951, 'name': 'st. louis missouri'}, {'id': 167952, 'name': 'double take'}, {'id': 167958, 'name': "o'hare airport chicago"}, {'id': 167959, 'name': 'chatter box'}, {'id': 167963, 'name': '\xa0wichita kansas'}, {'id': 167965, 'name': 'speeding ticket'}, {'id': 167968, 'name': 'chewing tobacco'}, {'id': 167970, 'name': 'credit card fraud'}, {'id': 167975, 'name': 'state trooper'}, {'id': 167979, 'name': 'sears tower chicago'}, {'id': 167982, 'name': 'unlikely friendship'}, {'id': 179430, 'name': 'aftercreditsstinger'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 298820, 'name': 'American Pie (Spin-off) Collection', 'poster_path': '/deSui9fZHgArlSmOGxRV1ZBqYTO.jpg', 'backdrop_path': '/au9AnpVPqjFfTZIGGuV94276KaL.
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: keywords ---
+Razón: illegal escape sequence (\x) got '\...' (line 1, column 101)
+Dato Original: [{'id': 1196, 'name': 'florida'}, {'id': 10329, 'name': 'wealth'}, {'id': 168192, 'name': 'speedboat\xa0'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: cast ---
+Razón: illegal escape sequence (\') got '\...' (line 1, column 835)
+Dato Original: [{'cast_id': 1, 'character': 'Auro', 'credit_id': '52fe44fec3a368484e042a13', 'gender': 2, 'id': 35780, 'name': 'Amitabh Bachchan', 'order': 0, 'profile_path': '/9daoHX8vQrrk2oLQQdrvRV0UlE6.jpg'}, {'cast_id': 2, 'character': 'Amol Arte', 'credit_id': '52fe44fec3a368484e042a17', 'gender': 0, 'id': 35793, 'name': 'Abhishek Bachchan', 'order': 1, 'profile_path': '/1zKoM8rIRqs3vmO8bRIWhBeiurb.jpg'}, {'cast_id': 3, 'character': 'Vidya Arte', 'credit_id': '52fe44fec3a368484e042a1b', 'gender': 1, 'id': 35068, 'name': 'Vidya Balan', 'order': 2, 'profile_path': '/anMmmqKY11jcm0UnSSakfNOSCyB.jpg'}, {'cast_id': 4, 'character': 'Mr. Arte', 'credit_id': '52fe44fec3a368484e042a1f', 'gender': 2, 'id': 85033, 'name': 'Paresh Rawal', 'order': 3, 'profile_path': '/xFVHMvDC8s4Ab2sLXrdVxMxZ33b.jpg'}, {'cast_id': 5, 'character': '"Bum"(Vidya\'s mother)', 'credit_id': '52fe44fec3a368484e042a23', 'gender': 0, 'id': 96343, 'name': 'Arundathi Nag', 'order': 4, 'profile_path': '/aXXPJYG8xCcUJuiVdSpju5IfuMO.jpg'}, {'cast_id': 10, 'character': 'Pratik Katare', 'credit_id': '52fe44fec3a368484e042a39', 'gender': 0, 'id': 96346, 'name': 'Swini Khera', 'order': 5, 'profile_path': None}, {'cast_id': 11, 'character': 'Narrator', 'credit_id': '52fe44fec3a368484e042a3d', 'gender': 1, 'id': 35743, 'name': 'Jaya Bachchan', 'order': 6, 'profile_path': '/c0guZYhxlssatd0HT5M15w4lM6A.jpg'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: cast ---
+Razón: illegal escape sequence (\') got '\...' (line 1, column 835)
+Dato Original: [{'cast_id': 1, 'character': 'Auro', 'credit_id': '52fe44fec3a368484e042a13', 'gender': 2, 'id': 35780, 'name': 'Amitabh Bachchan', 'order': 0, 'profile_path': '/9daoHX8vQrrk2oLQQdrvRV0UlE6.jpg'}, {'cast_id': 2, 'character': 'Amol Arte', 'credit_id': '52fe44fec3a368484e042a17', 'gender': 0, 'id': 35793, 'name': 'Abhishek Bachchan', 'order': 1, 'profile_path': '/1zKoM8rIRqs3vmO8bRIWhBeiurb.jpg'}, {'cast_id': 3, 'character': 'Vidya Arte', 'credit_id': '52fe44fec3a368484e042a1b', 'gender': 1, 'id': 35068, 'name': 'Vidya Balan', 'order': 2, 'profile_path': '/anMmmqKY11jcm0UnSSakfNOSCyB.jpg'}, {'cast_id': 4, 'character': 'Mr. Arte', 'credit_id': '52fe44fec3a368484e042a1f', 'gender': 2, 'id': 85033, 'name': 'Paresh Rawal', 'order': 3, 'profile_path': '/xFVHMvDC8s4Ab2sLXrdVxMxZ33b.jpg'}, {'cast_id': 5, 'character': '"Bum"(Vidya\'s mother)', 'credit_id': '52fe44fec3a368484e042a23', 'gender': 0, 'id': 96343, 'name': 'Arundathi Nag', 'order': 4, 'profile_path': '/aXXPJYG8xCcUJuiVdSpju5IfuMO.jpg'}, {'cast_id': 10, 'character': 'Pratik Katare', 'credit_id': '52fe44fec3a368484e042a39', 'gender': 0, 'id': 96346, 'name': 'Swini Khera', 'order': 5, 'profile_path': None}, {'cast_id': 11, 'character': 'Narrator', 'credit_id': '52fe44fec3a368484e042a3d', 'gender': 1, 'id': 35743, 'name': 'Jaya Bachchan', 'order': 6, 'profile_path': '/c0guZYhxlssatd0HT5M15w4lM6A.jpg'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 223926, 'name': 'Impy, the small dinosaur Collection', 'poster_path': '/1PeRZMFnMH3C1NoaSpQoaV1TDHx.jpg', 'backdrop_path': '/byBldukCDG11iVBgNocqm9PfERM
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 85817, 'name': 'Arthur and the Invisibles Collection', 'poster_path': '/lpKNbnUpP0h0cnVwC1LaE9YJB3U.jpg', 'backdrop_path': '/e8Q363orc1wi02TSSoDDlil2qXh
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 105625, 'name': 'House of 1000 Corpses Collection', 'poster_path': '/7xpo52YDhHNFG5qdrLxhG58k0ke.jpg', 'backdrop_path': '/osLewbX6FJMy1iUcNHm6hoiNH0j.jp
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: cast ---
+Razón: illegal escape sequence (\') got '\...' (line 1, column 4013)
+Dato Original: [{'cast_id': 6, 'character': 'Yukio Mishima (segment "November 25, 1970")', 'credit_id': '52fe452ac3a368484e04c15f', 'gender': 2, 'id': 95345, 'name': 'Ken Ogata', 'order': 0, 'profile_path': '/3Lv1AarZoHxBkUCHVA0s3vDN9iQ.jpg'}, {'cast_id': 7, 'character': 'Mishima, age 18-19 (segment "Flashbacks")', 'credit_id': '52fe452ac3a368484e04c163', 'gender': 0, 'id': 96863, 'name': 'GÃ´ RijÃ»', 'order': 1, 'profile_path': '/gUucao7KeVO2FZ9XDMf2YUvwesH.jpg'}, {'cast_id': 8, 'character': 'Mishima - age 9-14 (segment "Flashbacks")', 'credit_id': '52fe452ac3a368484e04c167', 'gender': 0, 'id': 96864, 'name': 'Masato Aizawa', 'order': 2, 'profile_path': None}, {'cast_id': 20, 'character': 'Morita (segment "November 25, 1970")', 'credit_id': '52fe452ac3a368484e04c1ad', 'gender': 0, 'id': 132956, 'name': 'Masayuki Shionoya', 'order': 3, 'profile_path': None}, {'cast_id': 21, 'character': 'Cadet #1 (segment "November 25, 1970")', 'credit_id': '52fe452ac3a368484e04c1b1', 'gender': 0, 'id': 55783, 'name': 'Hiroshi Mikami', 'order': 4, 'profile_path': '/5QAPjsTKpNzNxU597QiShed1s4y.jpg'}, {'cast_id': 22, 'character': 'Cadet #2 (segment "November 25, 1970")', 'credit_id': '52fe452ac3a368484e04c1b5', 'gender': 0, 'id': 553316, 'name': 'Junya Fukuda', 'order': 5, 'profile_path': None}, {'cast_id': 23, 'character': 'Cadet #3 (segment "November 25, 1970")', 'credit_id': '52fe452ac3a368484e04c1b9', 'gender': 0, 'id': 553317, 'name': 'Shigeto Tachihara', 'order': 6, 'profile_path': None}, {'cast_id': 24, 'character': 'General Mashita (segment "November 25, 1970")', 'credit_id': '52fe452ac3a368484e04c1bd', 'gender': 0, 'id': 226744, 'name': 'Junkichi Orimoto', 'order': 7, 'profile_path': None}, {'cast_id': 26, 'character': 'Mishima, age 5 (segment "Flashbacks")', 'credit_id': '52fe452ac3a368484e04c1c1', 'gender': 0, 'id': 553318, 'name': 'Yuki Nagahara', 'order': 8, 'profile_path': None}, {'cast_id': 27, 'character': 'Literary Friend (segment "Flashbacks")', 'credit_id': '52fe452ac3a368484e04c1c5', 'gender': 0, 'id': 553319, 'name': 'Kyuzo Kobayashi', 'order': 9, 'profile_path': None}, {'cast_id': 28, 'character': 'Dancing Friend (segment "Flashbacks")', 'credit_id': '52fe452ac3a368484e04c1c9', 'gender': 0, 'id': 553320, 'name': 'Yuki Kitazume', 'order': 10, 'profile_path': None}, {'cast_id': 29, 'character': 'Grandmother (segment "Flashbacks")', 'credit_id': '52fe452ac3a368484e04c1cd', 'gender': 1, 'id': 40453, 'name': 'Haruko Kato', 'order': 11, 'profile_path': '/fpI47MewcRZn0Ro5LXRfrEptaWW.jpg'}, {'cast_id': 30, 'character': 'Mizoguchi (segment "The Temple of the Golden Pavilion")', 'credit_id': '52fe452ac3a368484e04c1d1', 'gender': 0, 'id': 553322, 'name': 'Yasosuke Bando', 'order': 12, 'profile_path': None}, {'cast_id': 31, 'character': 'Mariko (segment "The Temple of the Golden Pavilion")', 'credit_id': '52fe452ac3a368484e04c1d5', 'gender': 0, 'id': 553323, 'name': 'Hisako Manda', 'order': 13, 'profile_path': '/9lTzVU3EOejNehPAOwDqNenwQN3.jpg'}, {'cast_id': 32, 'character': 'First Girl (segment "The Temple of the Golden Pavilion")', 'credit_id': '52fe452ac3a368484e04c1d9', 'gender': 0, 'id': 553324, 'name': 'Naomi Oki', 'order': 14, 'profile_path': None}, {'cast_id': 33, 'character': 'Second Girl (segment "The Temple of the Golden Pavilion")', 'credit_id': '52fe452ac3a368484e04c1dd', 'gender': 1, 'id': 553325, 'name': 'Miki Takakura', 'order': 15, 'profile_path': '/2bXHWy82SzgMCFIuxVRKvDtw8Q6.jpg'}, {'cast_id': 34, 'character': 'Madame (segment "The Temple of the Golden Pavilion") (as Imari Tsuji)', 'credit_id': '52fe452ac3a368484e04c1e1', 'gender': 0, 'id': 553326, 'name': 'Imari Tsujikoichi Sato', 'order': 16, 'profile_path': None}, {'cast_id': 35, 'character': 'Kashiwagi (segment "The Temple of the Golden Pavilion")', 'credit_id': '52fe452ac3a368484e04c1e5', 'gender': 2, 'id': 58662, 'name': 'Koichi Sato', 'order': 17, 'profile_path': '/aZLxJv0Hd1s9uNdjZvDZbKTM9pB.jpg'}, {'cast_id': 36, 'character': 'Osamu (segment "Kyoko\'s House")', 'credit_id': '52fe452ac3a368484e04c1e9', 'gender': 0, 'id': 79944, 'name': 'Kenji Sawada', 'order': 18, 'profile_path': '/8jS8jqsCaxbZaWE78D8S3XFBDuU.jpg'}, {'cast_id': 37, 'character': 'Kiyomi (segment "Kyoko\'s House")', 'credit_id': '52fe452ac3a368484e04c1ed', 'gender': 0, 'id': 553327, 'name': 'Reisen Lee', 'order': 19, 'profile_path': None}, {'cast_id': 38, 'character': 'Mitsuko (segment "Kyoko\'s House")', 'credit_id': '52fe452ac3a368484e04c1f1', 'gender': 0, 'id': 553328, 'name': 'Setsuko Karasuma', 'order': 20, 'profile_path': None}, {'cast_id': 39, 'character': 'Natsuo (segment "Kyoko\'s House")', 'credit_id': '52fe452ac3a368484e04c1f5', 'gender': 0, 'id': 553329, 'name': 'Tadanori Yokoo', 'order': 21, 'profile_path': None}, {'cast_id': 40, 'character': 'Takei (segment "Kyoko\'s House")', 'credit_id': '52fe452ac3a368484e04c1f9', 'gender': 2, 'id': 26756, 'name': 'Yasuaki Kurata', 'order': 22, 'profile_path': '/xqh4U82vnUOJKs5fygWWejdpclx.jpg'}, {'cast_id': 41, 'character': 'Thug (segment "Kyoko\'s House")', 'credit_id': '52fe452ac3a368484e04c1fd', 'gender': 0, 'id': 135377, 'name': 'Mitsuru Hirata', 'order': 23, 'profile_path': '/wsSoQ56jfCAvN1phqfZ75vsqxec.jpg'}, {'cast_id': 42, 'character': 'Isao (segment "Runaway Horses")', 'credit_id': '52fe452ac3a368484e04c201', 'gender': 2, 'id': 82869, 'name': 'Toshiyuki Nagashima', 'order': 24, 'profile_path': '/xfL757VHSZg02HETRXGi3pS7XMr.jpg'}, {'cast_id': 43, 'character': 'Lieutenant Hori (segment "Runaway Horses")', 'credit_id': '52fe452ac3a368484e04c205', 'gender': 0, 'id': 239393, 'name': 'Hiroshi Katsuno', 'order': 25, 'profile_path': None}, {'cast_id': 44, 'character': 'Kendo Instructor (segment "Runaway Horses")', 'credit_id': '52fe452ac3a368484e04c209', 'gender': 0, 'id': 127835, 'name': 'Naoya Makoto', 'order': 26, 'profile_path': None}, {'cast_id': 45, 'character': 'Izutsu (segment "Runaway Horses")', 'credit_id': '52fe452ac3a368484e04c20d', 'gender': 0, 'id': 553332, 'name': 'Hiroki Ida', 'order': 27, 'profile_path': None}, {'cast_id': 46, 'character': 'Kurahara (segment "Runaway Horses")', 'credit_id': '52fe452ac3a368484e04c211', 'gender': 0, 'id': 553333, 'name': 'Jun Negami', 'order': 28, 'profile_path': None}, {'cast_id': 47, 'character': 'Interrogator (segment "Runaway Horses")', 'credit_id': '52fe452ac3a368484e04c215', 'gender': 2, 'id': 131202, 'name': 'RyÃ´ Ikebe', 'order': 29, 'profile_path': '/eRWlwQDqDz0nDV7CZ5O4aRNekOf.jpg'}, {'cast_id': 48, 'character': "'Rokumeikan' Producer", 'credit_id': '52fe452ac3a368484e04c219', 'gender': 2, 'id': 93100, 'name': 'Toshio Hosokawa', 'order': 30, 'profile_path': None}, {'cast_id': 49, 'character': 'Military Doctor', 'credit_id': '52fe452ac3a368484e04c21d', 'gender': 0, 'id': 551744, 'name': 'Hideo Fukuhara', 'order': 31, 'profile_path': None}, {'cast_id': 50, 'character': "'Yukoku' Producer", 'credit_id': '52fe452ac3a368484e04c221', 'gender': 0, 'id': 34696, 'name': 'Yosuke Mizuno', 'order': 32, 'profile_path': None}, {'cast_id': 51, 'character': 'Ichigaya Aide-de-Camp', 'credit_id': '52fe452ac3a368484e04c225', 'gender': 2, 'id': 133710, 'name': 'Eimei Esumi', 'order': 33, 'profile_path': None}, {'cast_id': 52, 'character': 'Ichigaya Colonel', 'credit_id': '52fe452ac3a368484e04c229', 'gender': 0, 'id': 553336, 'name': 'Minoru Hodaka', 'order': 34, 'profile_path': None}, {'cast_id': 53, 'character': "Isao's Classmate", 'credit_id': '52fe452ac3a368484e04c22d', 'gender': 0, 'id': 553337, 'name': 'ShÃ´ichirÃ´ Sakata', 'order': 35, 'profile_path': None}, {'cast_id': 54, 'character': 'American Reporter (as Alan Mark Poul)', 'credit_id': '52fe452ac3a368484e04c231', 'gender': 2, 'id': 113225, 'name': 'Alan Poul', 'order': 36, 'profile_path': '/6wzLRoaq3D4HkE9TEdV3ssLO4Ne.jpg'}, {'cast_id': 55, 'character': 'Reporter #1', 'credit_id': '52fe452ac3a368484e04c235', 'gender': 0, 'id': 553338, 'name': 'Ren Ebata', 'order': 37, 'profile_path': None}, {'cast_id': 56, 'character': 'Reporter #2', 'credit_id': '52fe452ac3a368484e04c239', 'gender': 0, 'id': 553339, 'name': 'Yasuhiro Arai', 'order': 38, 'profile_path': '/vVUJYH4GaHZB82wRE1Fq29IvCEl.jpg'}, {'cast_id': 57, 'character': 'Reporter #3', 'credit_id': '52fe452ac3a368484e04c23d', 'gender': 0, 'id': 553340, 'name': 'Fumio Mizushima', 'order': 39, 'profile_path': None}, {'cast_id': 58, 'character': 'Pavilion Acolyte', 'credit_id': '52fe452ac3a368484e04c241', 'gender': 0, 'id': 553341, 'name': 'Shinji Miura', 'order': 40, 'profile_path': None}, {'cast_id': 59, 'character': 'Student', 'credit_id': '52fe452ac3a368484e04c245', 'gender': 0, 'id': 553342, 'name': 'Yuichi Sato', 'order': 41, 'profile_path': None}, {'cast_id': 60, 'character': "Thug's Girl Friend", 'credit_id': '52fe452bc3a368484e04c249', 'gender': 0, 'id': 553343, 'name': 'Sachiko Akagi', 'order': 42, 'profile_path': None}, {'cast_id': 61, 'character': 'Romeo', 'credit_id': '52fe452bc3a368484e04c24d', 'gender': 0, 'id': 553344, 'name': 'Tsutomu Harada', 'order': 43, 'profile_path': None}, {'cast_id': 62, 'character': 'Juliet', 'credit_id': '52fe452bc3a368484e04c251', 'gender': 0, 'id': 553345, 'name': 'Mami Okamoto', 'order': 44, 'profile_path': None}, {'cast_id': 63, 'character': 'Interrogation Policeman', 'credit_id': '52fe452bc3a368484e04c255', 'gender': 0, 'id': 553347, 'name': 'Atsushi Takayama', 'order': 45, 'profile_path': None}, {'cast_id': 64, 'character': "Grandmother's Nurse", 'credit_id': '52fe452bc3a368484e04c259', 'gender': 0, 'id': 553348, 'name': 'Kimiko Ito', 'order': 46, 'profile_path': None}, {'cast_id': 65, 'character': 'First MP', 'credit_id': '52fe452bc3a368484e04c25d', 'gender': 0, 'id': 553349, 'name': 'Kojiro Oka', 'order': 47, 'profile_path': None}, {'cast_id': 66, 'character': 'Actor #1', 'credit_id': '52fe452bc3a368484e04c261', 'gender': 0, 'id': 553350, 'name': 'Tatsuya Hiragaki', 'order': 48, 'profile_path': None}, {'cast_id': 67, 'character': 'Policeman', 'credit_id': '52fe452bc3a368484e04c265', 'gender': 0, 'id': 553351, 'name': 'Shinichi Nosaka', 'order': 49, 'profile_path': None}, {'cast_id': 68, 'character': "Osamu's Mother", 'credit_id': '52fe452bc3a368484e04c269', 'gender': 0, 'id': 142485, 'name': 'Sachiko Hidari', 'order': 50, 'profile_path': None}, {'cast_id': 69, 'character': 'Narrator (voice)', 'credit_id': '52fe452bc3a368484e04c26d', 'gender': 2, 'id': 6355, 'name': 'Roy Scheider', 'order': 51, 'profile_path': '/gx1jsvIL2OCzG6TOnl7ErgD28ZU.jpg'}, {'cast_id': 70, 'character': 'A monk (uncredited)', 'credit_id': '52fe452bc3a368484e04c271', 'gender': 0, 'id': 33135, 'name': 'Chishu Ryu', 'order': 52, 'profile_path': '/ocEzSylcvsKIKw8LciHEA3E1LEG.jpg'}, {'cast_id': 71, 'character': 'Mother (segment', 'credit_id': '52fe452bc3a368484e04c275', 'gender': 0, 'id': 1050796, 'name': 'Naoko Ã”tani', 'order': 53, 'profile_path': None}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 138971, 'name': 'The Slumber Party Massacre Collection', 'poster_path': '/hbNwVI7tOr4uWeigv8p7q42MUS7.jpg', 'backdrop_path': '/d90ninW84rPsHNajdsxM5fQau
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: keywords ---
+Razón: illegal escape sequence (\x) got '\...' (line 1, column 438)
+Dato Original: [{'id': 270, 'name': 'ocean'}, {'id': 658, 'name': 'sea'}, {'id': 2772, 'name': 'diving suit'}, {'id': 3243, 'name': 'flying saucer'}, {'id': 3312, 'name': 'nuclear missile'}, {'id': 4862, 'name': 'alien life-form'}, {'id': 6255, 'name': 'insanity'}, {'id': 10503, 'name': 'scuba diving'}, {'id': 14785, 'name': 'underwater'}, {'id': 155334, 'name': 'scuba'}, {'id': 162351, 'name': 'deepsea'}, {'id': 185477, 'name': 'trapped underwater\xa0'}, {'id': 233020, 'name': 'thalassophobia'}]
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 136218, 'name': 'Night of the Demons Collection', 'poster_path': '/5GrdNoRI4cHrIlm5XrjinS4HVvm.jpg', 'backdrop_path': '/vuMASrjy8ItbQXQbZGBz7Vhdo0I.jpg'
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 138971, 'name': 'The Slumber Party Massacre Collection', 'poster_path': '/hbNwVI7tOr4uWeigv8p7q42MUS7.jpg', 'backdrop_path': '/d90ninW84rPsHNajdsxM5fQau
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 91430, 'name': 'The Neverending Story Collection', 'poster_path': '/tXuOhgEbXoba7vVIybzGlnycoNq.jpg', 'backdrop_path': '/2IqXJIR1i0f6Ngq3A6rjXhQNqFc.jpg
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 2794, 'name': 'The Chronicles of Riddick Collection', 'poster_path': '/4R2zrqk9KzgxU9UDH3yUUsENXR.jpg', 'backdrop_path': '/xb5zyHecWA7UACdiNPXDA3m5HSY.j
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 2794, 'name': 'The Chronicles of Riddick Collection', 'poster_path': '/4R2zrqk9KzgxU9UDH3yUUsENXR.jpg', 'backdrop_path': '/xb5zyHecWA7UACdiNPXDA3m5HSY.j
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 2794, 'name': 'The Chronicles of Riddick Collection', 'poster_path': '/4R2zrqk9KzgxU9UDH3yUUsENXR.jpg', 'backdrop_path': '/xb5zyHecWA7UACdiNPXDA3m5HSY.j
+--------------------------------------------------------------------------------
+--- ERROR IRRECUPERABLE EN COLUMNA: belongs_to_collection ---
+Razón: exhausted input
+Dato Original: {'id': 295, 'name': 'Pirates of the Caribbean Collection', 'poster_path': '/zT5UKFhq9nk97VGlBbAxlAK8UFN.jpg', 'backdrop_path': '/cnKAGbX1rDkAquF2V1wVkptHDJO.jp
+--------------------------------------------------------------------------------
