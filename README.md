@@ -867,7 +867,8 @@ Su estructura combina datos numéricos, categóricos y textuales, lo que permite
 ### Esquema Conceptual (Diagrama E/R)
 > **Nota:** Inserte aquí el diagrama conceptual (Figura página 2).
 >
-<img width="1091" height="754" alt="image" src="https://github.com/user-attachments/assets/92425656-124f-46f3-aeff-087b275061fb" />
+<img width="1166" height="558" alt="image" src="https://github.com/user-attachments/assets/6083478e-d265-4119-bd7c-cb18ca73bcf3" />
+
 
 ### Diccionario de Datos (Modelo Conceptual)
 
